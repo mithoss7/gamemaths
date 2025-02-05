@@ -1,0 +1,114 @@
+/* Si tu utilises déjà des variables globales dans `styles.scss` ou ailleurs,
+   ajuste ici ce dont tu as besoin. Sinon, tu peux mettre ou redéfinir rapidement
+   quelques variables SCSS : */
+
+   $card-bg: rgba(255, 255, 255, 0.18); // Augmenter l'opacité pour plus de contraste
+   $success-color: #4CAF50;   // Vert
+   $error-color: #E53935;     // Rouge
+   $accent-color: #FFD700;    // Doré
+   $border-radius: 8px;
+   
+   /* Container principal du composant Quizz */
+   .quizz-container {
+     margin: 2rem auto;
+     max-width: 600px;
+     padding: 1rem;
+   
+     h1 {
+       text-align: center;
+       margin-bottom: 1.5rem;
+       font-size: 2rem;
+       color: $accent-color;
+     }
+   
+     .quizz-card {
+       /* On augmente l’opacité pour un meilleur contraste */
+       background-color: $card-bg;
+       border-radius: $border-radius;
+       padding: 1.5rem;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+   
+       .question-block {
+         margin-bottom: 1.5rem;
+   
+         p {
+           margin: 0 0 0.5rem;
+           font-weight: bold;
+           font-size: 1.1rem;
+         }
+   
+         /* Nouveau conteneur flex pour aligner input et feedback côte à côte */
+         .answer-container {
+           display: flex;
+           align-items: center; /* verticalement centré */
+           
+           /* On donne un petit écart entre l'input et le message */
+           .feedback {
+             margin-left: 0.8rem;
+             font-size: 0.95rem;
+             font-weight: bold;
+           }
+         }
+   
+         input[type="number"] {
+           width: 80px;
+           padding: 0.5rem;
+           border: none;
+           border-radius: $border-radius;
+           text-align: center;
+           font-size: 1rem;
+   
+           &:focus {
+             outline: 2px solid $accent-color;
+           }
+   
+           /* Désactivé quand score !== null
+              => n'apparaît pas dans le style, car c'est juste un attribut [disabled] */
+         }
+   
+         .correct-answer {
+           color: $success-color;
+         }
+   
+         .wrong-answer {
+           color: $error-color;
+   
+           .correct-value {
+             color: $accent-color;
+             margin-left: 0.3rem;
+           }
+         }
+       }
+   
+       .buttons {
+         margin-top: 2rem;
+         text-align: center;
+   
+         button {
+           padding: 0.7rem 1.5rem;
+           margin: 0 0.5rem;
+           border: none;
+           border-radius: $border-radius;
+           font-size: 1rem;
+           font-weight: bold;
+           cursor: pointer;
+           background-color: $success-color; /* On garde un vert par défaut */
+           color: #fff;
+           transition: background-color 0.3s;
+   
+           &:hover {
+             background-color: darken($success-color, 10%);
+           }
+         }
+       }
+   
+       .result {
+         margin-top: 2rem;
+         text-align: center;
+         font-weight: bold;
+         font-size: 1.2rem;
+         color: $accent-color;
+       }
+     }
+   }
+   

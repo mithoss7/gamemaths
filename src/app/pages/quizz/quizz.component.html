@@ -1,0 +1,59 @@
+<div class="quizz-container">
+  <h1>Quiz de Maths</h1>
+
+  <div class="card quizz-card">
+    <!-- Liste des questions -->
+    <div *ngFor="let question of questions; let i = index" class="question-block">
+      <p>
+        Question {{ i + 1 }} :
+        <strong>{{ question.operand1 }} + {{ question.operand2 }} = ?</strong>
+      </p>
+
+      <!-- On regroupe l'input et le feedback dans un flex container -->
+      <div class="answer-container">
+        <input
+          type="number"
+          [(ngModel)]="question.userAnswer"
+          [disabled]="score !== null"
+        />
+
+        <!-- Feedback: apparaît seulement après validation (score !== null) -->
+        <div class="feedback" *ngIf="score !== null">
+          <span
+            *ngIf="question.userAnswer === question.correctAnswer"
+            class="correct-answer"
+          >
+            ✓ Bonne réponse !
+          </span>
+          <span
+            *ngIf="question.userAnswer !== question.correctAnswer"
+            class="wrong-answer"
+          >
+            ✗ Mauvaise réponse
+            <span class="correct-value">
+              (La bonne réponse est {{ question.correctAnswer }})
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Boutons -->
+    <div class="buttons">
+      <button (click)="submitQuiz()" [disabled]="score !== null">
+        Valider le Quiz
+      </button>
+      <button (click)="resetQuiz()" *ngIf="score !== null">
+        Rejouer
+      </button>
+    </div>
+
+    <!-- Score final -->
+    <div class="result" *ngIf="score !== null">
+      <p>
+        Vous avez {{ score }} bonne(s) réponse(s)
+        sur {{ questions.length }} !
+      </p>
+    </div>
+  </div>
+</div>
