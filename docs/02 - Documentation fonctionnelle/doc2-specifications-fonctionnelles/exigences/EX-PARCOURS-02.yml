@@ -1,0 +1,10 @@
+id: EX-PARCOURS-02
+titre: "Affichage de la correction sur erreur"
+statut: en_revue
+section: "9"
+rationale: >
+  Après une réponse incorrecte, l'apprenant reçoit immédiatement la bonne
+  réponse et une explication, conformément à l'intention pédagogique du produit.
+trace:
+  verifie_par: EX-PARCOURS-02.feature
+  satisfait: []

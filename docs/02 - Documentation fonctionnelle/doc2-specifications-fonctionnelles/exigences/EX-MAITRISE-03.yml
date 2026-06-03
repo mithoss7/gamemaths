@@ -1,0 +1,10 @@
+id: EX-MAITRISE-03
+titre: "Exercices distincts dans une série"
+statut: en_revue
+section: "7"
+rationale: >
+  Pour que la maîtrise atteste d'une compétence et non de la répétition d'un
+  même item, les N réussites doivent porter sur des exercices distincts.
+trace:
+  verifie_par: EX-MAITRISE-03.feature
+  satisfait: []

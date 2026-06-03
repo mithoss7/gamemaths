@@ -1,0 +1,11 @@
+id: INV-CONTENU-02
+titre: "Nombre minimal d'exercices par notion"
+statut: en_revue
+section: "10"
+rationale: >
+  La maîtrise exige N réussites sur des exercices distincts ; une notion doit
+  donc proposer au moins N exercices, faute de quoi la maîtrise serait
+  inatteignable.
+trace:
+  verifie_par: INV-CONTENU-02.feature
+  satisfait: []

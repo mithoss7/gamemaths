@@ -1,0 +1,11 @@
+id: INV-CONTENU-01
+titre: "Graphe des notions sans cycle"
+statut: en_revue
+section: "10"
+rationale: >
+  Un cycle de prérequis rendrait certaines notions définitivement
+  inaccessibles. Le contenu servi par l'API doit donc former un graphe orienté
+  acyclique.
+trace:
+  verifie_par: INV-CONTENU-01.feature
+  satisfait: []

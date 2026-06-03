@@ -1,0 +1,10 @@
+id: INV-CONTENU-03
+titre: "Explication obligatoire par exercice"
+statut: en_revue
+section: "10"
+rationale: >
+  L'affichage d'une explication après une erreur est une règle de parcours
+  (EX-PARCOURS-02). Chaque exercice doit donc fournir une explication non vide.
+trace:
+  verifie_par: INV-CONTENU-03.feature
+  satisfait: []

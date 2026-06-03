@@ -1,0 +1,11 @@
+id: EX-ETAT-02
+titre: "Distinction entre Disponible et En cours"
+statut: en_revue
+section: "5"
+rationale: >
+  Une notion accessible se présente comme Disponible tant qu'aucune tentative
+  n'a eu lieu, puis comme En cours dès qu'elle a été abordée (statut durable
+  Abordée), pour que la carte du parcours garde la mémoire du travail entamé.
+trace:
+  verifie_par: EX-ETAT-02.feature
+  satisfait: []

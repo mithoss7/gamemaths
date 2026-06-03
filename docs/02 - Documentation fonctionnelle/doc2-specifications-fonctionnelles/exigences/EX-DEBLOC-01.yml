@@ -1,0 +1,11 @@
+id: EX-DEBLOC-01
+titre: "Déblocage en cascade des notions successeures"
+statut: en_revue
+section: "6"
+rationale: >
+  La maîtrise d'une notion peut rendre disponibles une ou plusieurs notions qui
+  l'avaient pour prérequis. La maîtrise étant définitive, aucun recalcul
+  ultérieur ne fait régresser une notion maîtrisée.
+trace:
+  verifie_par: EX-DEBLOC-01.feature
+  satisfait: []

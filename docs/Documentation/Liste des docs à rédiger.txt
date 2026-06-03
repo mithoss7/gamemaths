@@ -1,0 +1,19 @@
+1. Contexte & objectifs
+
+2. Spécifications fonctionnelles
+
+3. Architecture technique
+
+4. Modélisation des données & API
+
+5. Règles de sécurité
+
+6. Exigences non-fonctionnelles
+
+7. UI/UX & accessibilité
+
+8. Stratégie de tests/validation
+
+9. Plan de gestion documentaire/versioning (BMS)
+
+10. Documents de référence / Glossaire / Annexes

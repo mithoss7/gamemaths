@@ -1,0 +1,11 @@
+id: EX-SESSION-02
+titre: "Persistance de la progression durable"
+statut: en_revue
+section: "8"
+rationale: >
+  Le statut durable (Abordée, Maîtrisée) est persisté localement et survit au
+  rechargement. La série, volatile, repart à zéro car la session précédente est
+  terminée.
+trace:
+  verifie_par: EX-SESSION-02.feature
+  satisfait: []

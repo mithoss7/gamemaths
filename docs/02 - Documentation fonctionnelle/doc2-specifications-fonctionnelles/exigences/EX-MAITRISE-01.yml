@@ -1,0 +1,11 @@
+id: EX-MAITRISE-01
+titre: "Un seul essai par exercice"
+statut: en_revue
+section: "7"
+rationale: >
+  Chaque exercice n'accepte qu'une seule réponse, définitive. Cette règle donne
+  son sens à la série : il n'existe pas de seconde tentative qui viendrait
+  « rattraper » une erreur.
+trace:
+  verifie_par: EX-MAITRISE-01.feature
+  satisfait: []

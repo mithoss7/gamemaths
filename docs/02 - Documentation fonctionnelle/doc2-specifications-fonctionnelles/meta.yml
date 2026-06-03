@@ -1,0 +1,8 @@
+titre: "GameMaths — Parcours d'apprentissage des fractions"
+sous_titre: "Document 2 — Spécifications fonctionnelles"
+version: "0.2"
+date: "2026-06-02"
+normes:
+  - "ISO/IEC/IEEE 29148"
+references:
+  - "Document 1 — Contexte et objectifs (cadrage GameMaths)"

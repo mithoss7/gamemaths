@@ -1,0 +1,10 @@
+id: EX-PARCOURS-03
+titre: "Écran de réussite et annonce des déblocages"
+statut: en_revue
+section: "9"
+rationale: >
+  La maîtrise d'une notion déclenche un écran de réussite qui met en avant les
+  notions nouvellement débloquées, ce qui soutient la motivation.
+trace:
+  verifie_par: EX-PARCOURS-03.feature
+  satisfait: []

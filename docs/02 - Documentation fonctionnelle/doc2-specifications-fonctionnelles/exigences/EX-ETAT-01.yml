@@ -1,0 +1,11 @@
+id: EX-ETAT-01
+titre: "Verrouillage d'une notion selon ses prérequis"
+statut: en_revue
+section: "5"
+rationale: >
+  L'accès à une notion dépend de l'état de ses prérequis. Une notion sans
+  prérequis est immédiatement accessible ; un seul prérequis non maîtrisé
+  suffit à la verrouiller.
+trace:
+  verifie_par: EX-ETAT-01.feature
+  satisfait: []
