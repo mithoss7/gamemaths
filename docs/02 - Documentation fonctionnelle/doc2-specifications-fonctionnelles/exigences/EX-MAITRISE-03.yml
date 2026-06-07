@@ -1,10 +1,13 @@
 id: EX-MAITRISE-03
-titre: "Exercices distincts dans une série"
+titre: "Garantie d'exercices distincts au sein d'une série"
 statut: en_revue
 section: "7"
 rationale: >
-  Pour que la maîtrise atteste d'une compétence et non de la répétition d'un
-  même item, les N réussites doivent porter sur des exercices distincts.
+  Le système garantit qu'au sein d'une même série, deux réussites ne portent
+  jamais sur le même exercice : un exercice déjà réussi dans la série en cours
+  n'est pas reproposé tant que la série n'est pas rompue. L'apprenant ne peut
+  donc jamais atteindre la maîtrise en répétant un même item ; la maîtrise
+  atteste d'une compétence sur des exercices distincts.
 trace:
   verifie_par: EX-MAITRISE-03.feature
   satisfait: []

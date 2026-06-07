@@ -3,9 +3,10 @@ titre: "Fin de session et remise à zéro de la série"
 statut: en_revue
 section: "8"
 rationale: >
-  « N réussites d'affilée » s'entend au sein d'une même session, sans quitter la
-  notion. Quitter la notion termine la session et remet la série à zéro ; la
-  navigation interne (cours, exercices) ne l'interrompt pas.
+  Les N réussites requises s'entendent au sein d'une même session, sans quitter
+  la notion. Quitter la notion termine la session et remet la série à zéro, quel
+  que soit le nombre de réussites déjà accumulées ; la navigation interne entre
+  le cours et les exercices ne l'interrompt pas.
 trace:
   verifie_par: EX-SESSION-01.feature
   satisfait: []

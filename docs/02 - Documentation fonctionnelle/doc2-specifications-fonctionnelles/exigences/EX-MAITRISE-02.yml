@@ -3,9 +3,10 @@ titre: "Progression et rupture de la série"
 statut: en_revue
 section: "7"
 rationale: >
-  La maîtrise s'obtient par une série de N réussites. Une réussite incrémente la
-  série ; une erreur la remet à zéro. Atteindre N fait passer la notion à
-  Maîtrisée.
+  La maîtrise s'obtient par une série de N réussites consécutives au sein d'une
+  même session (N est configurable, valeur par défaut 3). Chaque réussite sur un
+  exercice non encore compté incrémente la série ; toute erreur la ramène à
+  zéro. La notion devient Maîtrisée dès que la série atteint N.
 trace:
   verifie_par: EX-MAITRISE-02.feature
   satisfait: []

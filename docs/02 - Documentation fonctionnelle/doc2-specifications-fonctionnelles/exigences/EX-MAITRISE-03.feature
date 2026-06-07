@@ -1,7 +1,6 @@
-Fonctionnalité: La série porte sur des exercices distincts
+Fonctionnalité: Garantie d'exercices distincts au sein d'une série
 
-  Scénario: réussir deux fois le même exercice ne compte qu'une fois
-    Étant donné une série à 1 sur 3
-    Et que l'apprenant vient de réussir l'exercice E
-    Quand l'apprenant réussit de nouveau l'exercice E
-    Alors la série reste à 1 sur 3
+  Scénario: un exercice déjà réussi dans la série n'est pas reproposé
+    Étant donné une notion En cours dont la série en cours comporte au moins une réussite
+    Quand le système présente l'exercice suivant
+    Alors cet exercice n'a pas encore été réussi au cours de la série en cours

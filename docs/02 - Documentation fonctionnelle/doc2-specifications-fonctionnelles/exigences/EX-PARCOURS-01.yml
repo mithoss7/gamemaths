@@ -3,9 +3,9 @@ titre: "Accès aux notions depuis la carte"
 statut: en_revue
 section: "9"
 rationale: >
-  La carte du parcours autorise l'entrée dans les notions Disponible ou En
-  cours, et refuse l'entrée dans les notions Verrouillées en indiquant le
-  prérequis manquant.
+  La carte du parcours autorise l'entrée dans les notions Disponible, En cours
+  et Maîtrisée (ces dernières restant consultables pour révision), et refuse
+  l'entrée dans les notions Verrouillées en indiquant le prérequis manquant.
 trace:
   verifie_par: EX-PARCOURS-01.feature
   satisfait: []

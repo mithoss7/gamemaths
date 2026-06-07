@@ -18,11 +18,14 @@ prérequis.
 
 ## Transitions
 
-- **Verrouillée vers Disponible** : le dernier prérequis manquant devient Maîtrisé (notion encore Non abordée).
-- **Disponible vers En cours** : à la première tentative d'exercice de la notion (le statut durable passe à Abordée).
-- **En cours vers Maîtrisée** : la série atteint N.
-- Aucune transition ne fait sortir une notion de l'état Maîtrisée.
-- Une notion Abordée ne redevient jamais Disponible : il n'existe pas de transition En cours vers Disponible.
+Les transitions ci-dessous décrivent l'évolution de l'**état affiché** ; chacune
+résulte d'un changement de **statut durable** et/ou de l'état des prérequis.
+
+- **Verrouillée vers Disponible** : le dernier prérequis manquant atteint le statut durable Maîtrisée (la notion conserve par ailleurs le statut durable Non abordée).
+- **Disponible vers En cours** : à la première tentative d'exercice, le statut durable de la notion passe de Non abordée à Abordée.
+- **En cours vers Maîtrisée** : la série atteint N et le statut durable passe de Abordée à Maîtrisée.
+- L'état affiché Maîtrisée est définitif : aucune transition n'en fait sortir, car le statut durable Maîtrisée ne change plus.
+- Il n'existe pas de transition En cours vers Disponible : le statut durable ne revient jamais de Abordée à Non abordée.
 
 Les exigences vérifiables correspondant à ce modèle sont spécifiées aux
 sections 5 à 8.

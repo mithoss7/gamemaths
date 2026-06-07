@@ -3,9 +3,8 @@ titre: "Persistance de la progression durable"
 statut: en_revue
 section: "8"
 rationale: >
-  Le statut durable (Abordée, Maîtrisée) est persisté localement et survit au
-  rechargement. La série, volatile, repart à zéro car la session précédente est
-  terminée.
+  Le statut durable d'une notion (Abordée ou Maîtrisée) est persisté localement
+  et survit au rechargement de l'application.
 trace:
   verifie_par: EX-SESSION-02.feature
   satisfait: []
