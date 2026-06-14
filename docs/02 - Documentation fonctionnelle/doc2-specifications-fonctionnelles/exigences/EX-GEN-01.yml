@@ -1,0 +1,12 @@
+id: EX-GEN-01
+titre: "Instanciation d'un exercice à partir d'un gabarit"
+statut: en_revue
+section: "11"
+rationale: >
+  Les exercices ne sont pas un contenu figé : le système les produit en
+  instanciant un gabarit, c'est-à-dire en tirant des valeurs concrètes pour ses
+  paramètres. La réponse attendue est dérivée de façon déterministe de ces
+  valeurs, ce qui rend l'exercice auto-corrigeable.
+trace:
+  verifie_par: EX-GEN-01.feature
+  satisfait: []

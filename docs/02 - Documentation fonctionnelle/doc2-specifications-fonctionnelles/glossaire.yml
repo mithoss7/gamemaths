@@ -17,3 +17,7 @@ definitions:
     texte: "Nombre de réussites consécutives, sur des exercices distincts, au sein d'une même session. Donnée volatile : elle naît à 0 et est perdue à la fin de la session."
   - terme: "N"
     texte: "Nombre de réussites requises pour maîtriser une notion. Paramètre configurable, valeur par défaut 3."
+  - terme: "Gabarit"
+    texte: "Modèle paramétré d'exercice rattaché à une notion. Il définit un type d'exercice, des paramètres, des contraintes de tirage, une règle de calcul de la réponse attendue et une explication. Le système l'instancie en tirant des valeurs concrètes."
+  - terme: "Instance"
+    texte: "Exercice concret obtenu en instanciant un gabarit (valeurs tirées). Deux instances dont les valeurs diffèrent sont des exercices différents."

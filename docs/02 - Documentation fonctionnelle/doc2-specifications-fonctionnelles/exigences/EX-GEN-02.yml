@@ -1,0 +1,12 @@
+id: EX-GEN-02
+titre: "Respect des contraintes de tirage"
+statut: en_revue
+section: "11"
+rationale: >
+  Un exercice généré doit rester pédagogiquement valide et bien défini. Toute
+  instance produite respecte donc les contraintes de tirage du gabarit (par
+  exemple dénominateur non nul, ou fraction non déjà irréductible pour un
+  exercice de simplification).
+trace:
+  verifie_par: EX-GEN-02.feature
+  satisfait: []

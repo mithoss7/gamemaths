@@ -1,11 +1,13 @@
 id: INV-CONTENU-02
-titre: "Nombre minimal d'exercices par notion"
+titre: "Capacité de génération d'au moins N exercices distincts par notion"
 statut: en_revue
 section: "10"
 rationale: >
-  La maîtrise exige N réussites sur des exercices distincts ; une notion doit
-  donc proposer au moins N exercices, faute de quoi la maîtrise serait
-  inatteignable.
+  Avec la génération paramétrique, une notion doit pouvoir produire au moins N
+  instances distinctes, sinon la maîtrise (N réussites sur des exercices
+  distincts) serait inatteignable. Cette contrainte borne de fait la valeur
+  configurable de N : N ne peut excéder la capacité générative de la notion la
+  moins fournie.
 trace:
   verifie_par: INV-CONTENU-02.feature
   satisfait: []

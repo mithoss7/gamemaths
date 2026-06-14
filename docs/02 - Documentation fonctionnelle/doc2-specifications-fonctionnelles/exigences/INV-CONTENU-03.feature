@@ -1,6 +1,6 @@
-Fonctionnalité: Chaque exercice fournit une explication
+Fonctionnalité: Chaque gabarit fournit une explication
 
-  Scénario: un exercice sans explication est rejeté
-    Étant donné un exercice dont l'explication est vide ou absente
+  Scénario: un gabarit sans explication est rejeté
+    Étant donné un gabarit dont l'explication est vide ou absente
     Quand le contenu est validé
     Alors la validation échoue
