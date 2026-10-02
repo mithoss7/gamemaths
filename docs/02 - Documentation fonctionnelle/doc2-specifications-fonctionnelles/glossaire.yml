@@ -20,4 +20,4 @@ definitions:
   - terme: "Gabarit"
     texte: "Modèle paramétré d'exercice rattaché à une notion. Il définit un type d'exercice, des paramètres, des contraintes de tirage, une règle de calcul de la réponse attendue et une explication. Le système l'instancie en tirant des valeurs concrètes."
   - terme: "Instance"
-    texte: "Exercice concret obtenu en instanciant un gabarit (valeurs tirées). Deux instances dont les valeurs diffèrent sont des exercices différents."
+    texte: "Exercice concret obtenu en instanciant un gabarit (valeurs tirées). Deux instances dont les valeurs diffèrent sont des exercices différents ; deux instances d'un même gabarit tirées avec les mêmes valeurs sont le même exercice."
