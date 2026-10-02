@@ -1,8 +1,8 @@
 definitions:
   - terme: "Notion"
-    texte: "Unité d'apprentissage : identifiant, titre, contenu de cours, liste d'exercices, liste d'identifiants de notions-prérequis."
+    texte: "Unité d'apprentissage : identifiant, titre, contenu de cours, liste de gabarits d'exercices, liste d'identifiants de notions-prérequis."
   - terme: "Exercice"
-    texte: "Question fermée à réponse unique, rattachée à une notion. Possède un énoncé, une réponse attendue, un type de réponse et une explication."
+    texte: "Question fermée à réponse unique, rattachée à une notion. Possède un énoncé, une réponse attendue, un type de réponse et une explication. Produit comme instance d'un gabarit."
   - terme: "Prérequis"
     texte: "Notion qui doit être Maîtrisée avant qu'une autre notion devienne accessible."
   - terme: "Statut durable"

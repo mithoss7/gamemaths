@@ -78,7 +78,7 @@ contenu (§5.5).
 
 ### 5.1 Vocabulaire
 
-- **Notion** : unité d'apprentissage (identifiant, titre, cours, exercices, prérequis).
+- **Notion** : unité d'apprentissage (identifiant, titre, cours, gabarits d'exercices, prérequis).
 - **Prérequis** : notion qui doit être Maîtrisée avant qu'une autre devienne accessible.
 - **Exercice** : question fermée à réponse unique (énoncé, réponse attendue, type de réponse,
   explication), produite comme instance d'un gabarit.
