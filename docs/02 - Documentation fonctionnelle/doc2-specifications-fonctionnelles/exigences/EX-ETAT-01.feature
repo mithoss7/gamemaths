@@ -7,7 +7,7 @@ Fonctionnalité: État affiché d'une notion selon ses prérequis
     Alors la notion est Disponible
 
   Scénario: un prérequis non maîtrisé verrouille la notion
-    Étant donné une notion ayant deux prérequis
-    Et que l'un au moins n'est pas Maîtrisé
+    Étant donné une notion ayant plusieurs prérequis
+    Et qu'au moins l'un d'eux n'est pas Maîtrisé
     Quand le système calcule son état affiché
     Alors la notion est Verrouillée

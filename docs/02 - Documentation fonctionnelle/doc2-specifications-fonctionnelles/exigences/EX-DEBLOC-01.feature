@@ -6,11 +6,10 @@ Fonctionnalité: Déblocage des notions à la maîtrise d'un prérequis
     Alors cette notion devient Disponible
 
   Scénario: une maîtrise débloque plusieurs notions
-    Étant donné deux notions A et B Verrouillées
+    Étant donné plusieurs notions Verrouillées
     Et que leur seul prérequis manquant est la même notion P
     Quand la notion P devient Maîtrisée
-    Alors la notion A devient Disponible
-    Et la notion B devient Disponible
+    Alors chacune de ces notions devient Disponible
 
   Scénario: la maîtrise est définitive
     Étant donné une notion Maîtrisée
