@@ -13,7 +13,7 @@ autonomie. Aucune donnée personnelle n'est collectée par le système.
 ## Contraintes
 
 - Front-end développé avec Angular.
-- Dépôt de code : GitLab (projet GameMaths).
+- Dépôt de code : GitHub (projet gamemaths).
 - Méthode documentaire : exigences vérifiables, exprimées en Gherkin, traçables par identifiant.
 - Cible mineurs : minimisation des données (satisfaite par l'absence de compte).
 
