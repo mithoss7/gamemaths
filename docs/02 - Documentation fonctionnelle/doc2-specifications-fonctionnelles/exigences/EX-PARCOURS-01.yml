@@ -4,7 +4,9 @@ statut: en_revue
 section: "9"
 rationale: >
   La carte du parcours autorise l'entrée dans les notions Disponible, En cours
-  et Maîtrisée (ces dernières restant consultables pour révision), et refuse
+  et Maîtrisée (ces dernières restant consultables pour révision : l'apprenant
+  peut revoir le cours et refaire des exercices, sans effet sur le statut
+  durable, qui reste Maîtrisée), et refuse
   l'entrée dans les notions Verrouillées en indiquant le prérequis manquant.
 trace:
   verifie_par: EX-PARCOURS-01.feature
