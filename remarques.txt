@@ -1,4 +1,0 @@
-Idées :
-
-    - Rajouter un chronomètre
-    - Plusieurs niveaux Débutant, Moyen, Expert, Maître modulé par le temps et la fréquence des opérations compliquées.
