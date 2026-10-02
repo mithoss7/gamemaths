@@ -279,7 +279,8 @@ trace:
    - Chaque modification est expliquée à Benjamin : fichiers touchés, ce qui change, pourquoi, et
      répercussions vérifiées (point 5). Benjamin veut comprendre chaque modification.
    - Un commit par modification ciblée ; le message explique le *pourquoi*, pas seulement le *quoi*.
-   - Une pull request par lot cohérent : Benjamin relit le diff et fusionne lui-même.
+   - Une pull request par lot cohérent : Benjamin relit le diff et fusionne lui-même. Claude peut aussi
+     fusionner sur `main`, mais **uniquement sur demande explicite de Benjamin**, après sa relecture.
    - Les décisions de fond (sens, architecture) restent à Benjamin (point 2) : Claude n'exécute
      qu'après sa décision.
    - Tags : pas de tag sans demande explicite. Un tag annoté par version de document, convention en
