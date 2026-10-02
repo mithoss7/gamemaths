@@ -83,7 +83,8 @@ contenu (§5.5).
 - **Exercice** : question fermée à réponse unique (énoncé, réponse attendue, type de réponse,
   explication), produite comme instance d'un gabarit.
 - **Gabarit** : modèle paramétré d'exercice rattaché à une notion (§5.4).
-- **Instance** : exercice concret tiré d'un gabarit. Valeurs différentes ⇒ exercices différents.
+- **Instance** : exercice concret tiré d'un gabarit. Valeurs différentes ⇒ exercices différents ;
+  même gabarit et mêmes valeurs ⇒ même exercice (décision du 2 octobre 2026).
 - **Progression** : ensemble des statuts durables des notions ; locale et persistée.
 - **Session** : activité continue sur *une* notion. Commence à l'entrée dans ses exercices ; se termine
   dès que l'apprenant quitte la notion (retour à la carte, autre notion, rechargement, fermeture).
@@ -100,9 +101,10 @@ contenu (§5.5).
 
 - **Statut durable** : Non abordée → Abordée (première tentative d'exercice) → Maîtrisée (la série
   atteint N). Aucun retour en arrière.
-- **État affiché**, recalculé à chaque affichage : *Verrouillée* si au moins un prérequis n'est pas
-  Maîtrisé ; sinon *Disponible* (statut Non abordée) ou *En cours* (statut Abordée) ; *Maîtrisée* si le
-  statut est Maîtrisée.
+- **État affiché**, recalculé à chaque affichage : *Maîtrisée* si le statut est Maîtrisée ; sinon
+  *Verrouillée* si au moins un prérequis n'est pas Maîtrisé ; sinon *Disponible* (statut Non abordée) ou
+  *En cours* (statut Abordée). Maîtrisée prime sur Verrouillée (décision du 2 octobre 2026) : les quatre
+  états sont mutuellement exclusifs, même si le contenu ajoute un prérequis à une notion déjà maîtrisée.
 
 ⚠️ **Ne jamais mélanger les deux niveaux dans une même phrase.** « Une notion Abordée ne redevient
 jamais Disponible » est un non-sens : Abordée est un statut durable, Disponible un état affiché.
@@ -119,7 +121,8 @@ Benjamin a corrigé explicitement ce type d'erreur.
   survit au rechargement.
 - Maîtriser une notion débloque en cascade les notions dont c'était le dernier prérequis manquant.
 - Carte : une notion Verrouillée ne s'ouvre pas et le système indique le prérequis manquant ;
-  Disponible et En cours s'ouvrent ; Maîtrisée reste consultable (⚠️ hypothèse non validée, §10).
+  Disponible et En cours s'ouvrent ; Maîtrisée reste consultable : révision du cours et nouveaux
+  exercices, sans effet sur le statut (validé le 2 octobre 2026).
 - Après une erreur : affichage de la bonne réponse et de l'explication.
 - À la maîtrise : écran de réussite listant exactement les notions nouvellement débloquées.
 
@@ -322,9 +325,8 @@ trace:
 2. **Bloc 4 — validation des réponses par type d'exercice** (prochain chantier) : écritures
    équivalentes (½, 2/4, 0,5), forme irréductible exigée ou non, comparateurs `<` `>` `=`, résultat
    simplifié attendu. Dépend du *type d'exercice* du gabarit ; complétera les règles de maîtrise.
-3. **À valider par Benjamin** : une notion Maîtrisée reste-t-elle consultable (révision du cours,
-   nouveaux exercices sans défaire la maîtrise) ? Scénario ajouté à EX-PARCOURS-01 sur hypothèse,
-   jamais confirmé.
+3. ~~Une notion Maîtrisée reste-t-elle consultable ?~~ **Tranché le 2 octobre 2026** : oui (cours et
+   nouveaux exercices, sans effet sur le statut) ; rationale d'EX-PARCOURS-01 mise à jour.
 4. **Document 1** à rédiger ; donner des identifiants stables aux objectifs pour remplir
    `trace.satisfait`. Les objectifs de succès n'ont pas été formulés depuis le pivot.
 5. **Relecture du doc 2**, puis passage des statuts à `valide`.
