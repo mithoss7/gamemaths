@@ -289,8 +289,11 @@ trace:
      fusionner sur `main`, mais **uniquement sur demande explicite de Benjamin**, après sa relecture.
    - Les décisions de fond (sens, architecture) restent à Benjamin (point 2) : Claude n'exécute
      qu'après sa décision.
-   - Tags : pas de tag sans demande explicite. Un tag annoté par version de document, convention en
-     cours de choix (`doc2-v0.1` ou `doc2-specs-fonctionnelles-v0.1`).
+   - Tags : pas de tag sans demande explicite. Un tag par version de document, convention
+     **`docN-vX.Y`** (ex. `doc2-v0.3`), validée le 2 octobre 2026 : `v0.X` tant que des exigences ne sont
+     pas `valide`, `v1.0` à la première version entièrement validée. Claude ne peut pas pousser de tag
+     (refus 403 de l'environnement) : Benjamin les crée via une release GitHub (tag léger ; la release
+     peut porter le `.docx` généré). Le doc 2 v0.3 sera tagué après la relecture de Benjamin.
 5. **Vérifier les répercussions** de toute modification : glossaire, autres exigences, invariants,
    sommaire, points en suspens.
 6. **Séparer « action requise » et « remarque pour info »** (leur mélange a déjà semé la confusion).
