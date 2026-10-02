@@ -9,5 +9,12 @@ Fonctionnalité: État affiché d'une notion selon ses prérequis
   Scénario: un prérequis non maîtrisé verrouille la notion
     Étant donné une notion ayant plusieurs prérequis
     Et qu'au moins l'un d'eux n'est pas Maîtrisé
+    Et dont le statut durable n'est pas Maîtrisée
     Quand le système calcule son état affiché
     Alors la notion est Verrouillée
+
+  Scénario: une notion maîtrisée n'est jamais verrouillée
+    Étant donné une notion dont le statut durable est Maîtrisée
+    Et dont au moins un prérequis n'est pas Maîtrisé
+    Quand le système calcule son état affiché
+    Alors la notion est Maîtrisée

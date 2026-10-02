@@ -5,7 +5,9 @@ section: "5"
 rationale: >
   L'accès à une notion dépend de l'état de ses prérequis. Une notion sans
   prérequis est immédiatement accessible ; un seul prérequis non maîtrisé
-  suffit à la verrouiller.
+  suffit à la verrouiller. Le statut durable Maîtrisée prime toutefois sur
+  le verrouillage : une notion maîtrisée reste affichée Maîtrisée, même si
+  l'évolution du contenu lui ajoute un prérequis non maîtrisé.
 trace:
   verifie_par: EX-ETAT-01.feature
   satisfait: []

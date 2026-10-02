@@ -11,7 +11,7 @@ prérequis.
 
 ## État affiché (dérivé)
 
-- **Verrouillée** : au moins un prérequis n'est pas Maîtrisé.
+- **Verrouillée** : au moins un prérequis n'est pas Maîtrisé et le statut durable n'est pas Maîtrisée.
 - **Disponible** : tous les prérequis sont Maîtrisés et le statut durable est Non abordée.
 - **En cours** : tous les prérequis sont Maîtrisés et le statut durable est Abordée.
 - **Maîtrisée** : le statut durable est Maîtrisée.
