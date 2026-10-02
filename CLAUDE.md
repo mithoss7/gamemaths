@@ -3,7 +3,8 @@
 Contexte projet pour Claude Code : synthèse des échanges de cadrage menés avec Claude en juin 2026
 (finalité, périmètre, décisions, méthode de travail, points ouverts). Synthèse du 2 octobre 2026.
 
-- **Dépôt** : https://gitlab.com/mithoss/GameMaths (`origin` = `https://gitlab.com/mithoss/GameMaths.git`)
+- **Dépôt** : https://github.com/mithoss7/gamemaths (`origin` = `https://github.com/mithoss7/gamemaths`).
+  GitHub remplace GitLab depuis le 2 octobre 2026 ; l'ancien dépôt GitLab (`mithoss/GameMaths`) n'est plus utilisé.
 - **Langue de travail** : français, partout (documents, Gherkin, échanges). Tutoiement.
 - **Autorité** : les sources versionnées dans `docs/` font foi. Si ce fichier et le dépôt divergent,
   signaler l'écart à Benjamin plutôt que trancher.
@@ -22,9 +23,10 @@ Consigne fondatrice de Benjamin :
 
 - **Phase actuelle : spécification.** Pas de code Angular, pas de backend, pas d'API, pas de `ng new`,
   pas de dépendance applicative — tant que Benjamin n'a pas ouvert explicitement la phase de développement.
-- **Exception tolérée : l'outillage documentaire** (`docs/build/assemble.py`, `docs/Makefile`). Ce n'est
-  pas du code applicatif. Toute évolution de cet outillage part des critères d'acceptation `@ATL-*`
-  de la spécification de l'atelier (`atelier-specification.md`, normalement sous `docs/`).
+- **Exception tolérée : l'outillage documentaire** (`build/assemble.py`, `Makefile`, sous
+  `docs/02 - Documentation fonctionnelle/`). Ce n'est pas du code applicatif. Toute évolution de cet
+  outillage part des critères d'acceptation `@ATL-*` de la spécification de l'atelier
+  (`atelier-specification.md`, **absente du dépôt** au 2 octobre 2026 : à y ajouter).
 - **Plus tard** : les `.feature` deviendront la base des tests d'acceptation (documentation vivante).
 
 ## 2. Pourquoi ce projet existe
@@ -175,12 +177,15 @@ Benjamin a prévu 10 documents. Connus à ce jour :
 | 1 | Contexte et objectifs | Matière verrouillée (§2 à §4) ; rédaction non faite à notre connaissance |
 | 2 | Spécifications fonctionnelles | **Document actif** |
 | 3 | Architecture technique | Choix de la stack backend |
-| 4 | Données / API (intitulé à confirmer) | — |
+| 4 | Modélisation des données & API | — |
 | 5 | Sécurité | Exigence transverse « public mineur » |
 | 6 | Spécifications non fonctionnelles | Reproductibilité du tirage |
 | 7 | UX / accessibilité | Affichage de la rupture de série |
 | 8 | Stratégie de tests | Couverture de test de chaque exigence (traçabilité aval) |
-| 9-10 | À reporter depuis la liste initiale de Benjamin | — |
+| 9 | Plan de gestion documentaire / versioning (BMS) | — |
+| 10 | Documents de référence / Glossaire / Annexes | — |
+
+Source des intitulés : `docs/Documentation/Liste des docs à rédiger.txt`.
 
 Règle de rangement : une spécification fonctionnelle dit *ce que* fait le système, jamais *comment*
 (doc 3). Tout point non fonctionnel, technique ou UX est renvoyé au document concerné et consigné
@@ -198,10 +203,11 @@ séparé de la mise en forme (`reference.docx`) ; chaque information n'existe qu
   (`EX-DEBLOCAGE-01`, `prose/03-modele-etats.md`, section « 4 ») sont antérieurs au doc 2 actuel :
   le dépôt fait foi.
 
-Arborescence (à vérifier dans le dépôt) :
+Arborescence réelle (vérifiée le 2 octobre 2026) : l'atelier n'est pas directement sous `docs/`,
+mais sous `docs/02 - Documentation fonctionnelle/` (appelé ci-dessous « racine de l'atelier ») :
 
 ```
-docs/
+docs/02 - Documentation fonctionnelle/
   Makefile                      # cibles doc2 et clean
   reference.docx                # styles Word uniquement (gabarit Pandoc par défaut, à personnaliser)
   build/assemble.py             # charge, valide, assemble, appelle Pandoc, produit la traçabilité
@@ -215,10 +221,11 @@ docs/
     _build/                     # généré, non versionné
 ```
 
-Commandes, depuis `docs/` :
+Commandes, depuis la racine de l'atelier (le `README.md` qui s'y trouve dit `cd docs` : il décrit
+l'ancienne arborescence) :
 
 ```
-make doc2                     # si le Makefile contient encore python3 : make doc2 PYTHON=python
+make doc2                     # le Makefile utilise python (PYTHON ?= python) ; ailleurs : make doc2 PYTHON=python3
 python build/assemble.py doc2-specifications-fonctionnelles    # équivalent sans make
 make clean                    # supprime _build/
 ```
@@ -265,10 +272,18 @@ trace:
 3. **Modifications ciblées, fichier par fichier.** Ne jamais régénérer l'arborescence ni réécrire un
    fichier entier quand une modification locale suffit : Benjamin l'a refusé explicitement, il veut
    garder dans git la trace de chacune de ses modifications. Annoncer quels fichiers changent et pourquoi.
-4. **Git : Benjamin committe lui-même** (Git GUI ; gitk pour les tags ; ligne de commande ou interface
-   web GitLab seulement quand le GUI ne suffit pas, ex. suppression d'un tag distant). Ne pas committer,
-   pousser ni taguer sans demande explicite. Tags : un tag annoté par version de document, convention en
-   cours de choix (`doc2-v0.1` ou `doc2-specs-fonctionnelles-v0.1`).
+4. **Git : Claude exécute, Benjamin comprend et décide** (règle du 2 octobre 2026, remplace « Benjamin
+   committe lui-même ») :
+   - Claude fait les modifications, les committe et les pousse sur sa branche de travail, **jamais
+     directement sur `main`**.
+   - Chaque modification est expliquée à Benjamin : fichiers touchés, ce qui change, pourquoi, et
+     répercussions vérifiées (point 5). Benjamin veut comprendre chaque modification.
+   - Un commit par modification ciblée ; le message explique le *pourquoi*, pas seulement le *quoi*.
+   - Une pull request par lot cohérent : Benjamin relit le diff et fusionne lui-même.
+   - Les décisions de fond (sens, architecture) restent à Benjamin (point 2) : Claude n'exécute
+     qu'après sa décision.
+   - Tags : pas de tag sans demande explicite. Un tag annoté par version de document, convention en
+     cours de choix (`doc2-v0.1` ou `doc2-specs-fonctionnelles-v0.1`).
 5. **Vérifier les répercussions** de toute modification : glossaire, autres exigences, invariants,
    sommaire, points en suspens.
 6. **Séparer « action requise » et « remarque pour info »** (leur mélange a déjà semé la confusion).
@@ -310,8 +325,9 @@ trace:
 5. **Relecture du doc 2**, puis passage des statuts à `valide`.
 6. **Documents suivants** : 3 (architecture, stack backend), 4, 5 (sécurité), 6 (non fonctionnel),
    7 (UX), 8 (stratégie de tests).
-7. **Atelier, décisions différées** : GitLab CI (génération du Word sur tag/release ; Makefile alors
-   rendu portable avec `python3`), sorties HTML/PDF via Pandoc, personnalisation de `reference.docx`.
+7. **Atelier, décisions différées** : intégration continue, désormais sur GitHub (GitHub Actions) et non
+   plus GitLab CI (génération du Word sur tag/release ; Makefile alors rendu portable avec `python3`),
+   sorties HTML/PDF via Pandoc, personnalisation de `reference.docx`.
 
 ## 11. Points d'attention (constats, non tranchés)
 
