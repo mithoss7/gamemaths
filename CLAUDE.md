@@ -57,6 +57,10 @@ avec des exemples concrets.
 
 Ne pas réintroduire XP, niveaux, chronomètre, leaderboard ou comptes sans décision explicite.
 
+Les traces de l'idée de départ (prototype Angular de quiz, modèle GitLab Pages, notes et documents de
+cadrage d'avant le pivot, `.docx` v0.2 périmé) ont été retirées de `main` le 2 octobre 2026. Elles
+restent consultables via `archive/avant-pivot`.
+
 ## 4. Périmètre du MVP
 
 **Dedans** : graphe de 8 notions sur les fractions ; pour chacune, un cours minimal et des exercices
@@ -332,8 +336,8 @@ trace:
 
 ## 11. Points d'attention (constats, non tranchés)
 
-- Le `.docx` v0.2 du doc 2 (2026-06-02) est **antérieur aux corrections** : il contient encore
-  EX-MAITRISE-04 et classe la génération hors périmètre. Ne pas s'y fier.
+- Le `.docx` v0.2 du doc 2 (2026-06-02) était **antérieur aux corrections** (EX-MAITRISE-04, génération
+  hors périmètre). Retiré du dépôt le 2 octobre 2026 ; `make doc2` produit la version à jour.
 - À l'import initial, le dézippage avait créé un dossier intermédiaire (`docs/GameMaths-docs/docs/`) :
   vérifier que les sources sont bien directement sous `docs/`.
 - Les `.feature` n'ont peut-être pas l'en-tête `# language: fr`. Sans lui, un parseur Gherkin standard
