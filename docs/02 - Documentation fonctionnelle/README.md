@@ -11,10 +11,15 @@ par Pandoc. Le `.docx` est un **artéfact généré**, jamais une source.
 
 ## Générer le document 2
 
+Depuis la racine du dépôt :
+
 ```
-cd docs
+cd "docs/02 - Documentation fonctionnelle"
 make doc2
 ```
+
+Le `Makefile` appelle `python` ; là où la commande s'appelle `python3` :
+`make doc2 PYTHON=python3`.
 
 Sorties (non versionnées) dans
 `doc2-specifications-fonctionnelles/_build/` :

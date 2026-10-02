@@ -228,8 +228,7 @@ docs/02 - Documentation fonctionnelle/
     _build/                     # généré, non versionné
 ```
 
-Commandes, depuis la racine de l'atelier (le `README.md` qui s'y trouve dit `cd docs` : il décrit
-l'ancienne arborescence) :
+Commandes, depuis la racine de l'atelier (voir aussi le `README.md` qui s'y trouve) :
 
 ```
 make doc2                     # le Makefile utilise python (PYTHON ?= python) ; ailleurs : make doc2 PYTHON=python3
