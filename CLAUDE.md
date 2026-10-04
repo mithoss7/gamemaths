@@ -41,6 +41,10 @@ Double finalité, dans cet ordre :
 Conséquences : la rigueur de méthode prime sur la vitesse ; chaque proposition explique son *pourquoi*,
 avec des exemples concrets.
 
+⚠️ **La finalité réelle est tacite** (décision du 4 octobre 2026) : elle ne figure **ni dans les documents
+du projet** (doc 1 compris : pas d'objectifs « projet »), **ni dans le README**. Elle n'est consignée
+qu'ici, dans le contexte de travail.
+
 ## 3. Historique du cadrage (matière du doc 1, verrouillée)
 
 | Sujet | Décision |
@@ -359,8 +363,17 @@ trace:
 2. ~~Bloc 4 — validation des réponses~~ **Fait et validé le 4 octobre 2026** (§5.3 bis).
 3. ~~Une notion Maîtrisée reste-t-elle consultable ?~~ **Tranché le 2 octobre 2026** : oui (cours et
    nouveaux exercices, sans effet sur le statut) ; rationale d'EX-PARCOURS-01 mise à jour.
-4. **Document 1** à rédiger ; donner des identifiants stables aux objectifs pour remplir
-   `trace.satisfait`. Les objectifs de succès n'ont pas été formulés depuis le pivot.
+4. **Document 1** en cours (décisions du 4 octobre 2026) :
+   - rangé à côté du doc 2 dans l'atelier actuel (`doc1-contexte-objectifs/`, cible `make doc1`) ; la
+     réorganisation de l'atelier sous `docs/` attendra la spécification de l'atelier ;
+   - plan inspiré d'ISO/IEC/IEEE 29148 : objet, contexte et historique, finalité du produit, parties
+     prenantes (Benjamin = porteur et commanditaire), objectifs, périmètre, contraintes et hypothèses,
+     critères de réussite ;
+   - objectifs du **produit** seulement, identifiants `OBJ-NN` (proposition OBJ-01 à OBJ-07 en attente
+     de validation par Benjamin) ;
+   - le doc 1 porte le périmètre au niveau des objectifs ; le doc 2 garde le hors-périmètre détaillé ;
+   - remplir `trace.satisfait` des exigences du doc 2 ne rouvre pas leur validation (modification de
+     traçabilité seule, sans toucher scénarios ni rationale).
 5. ~~Relecture du doc 2~~ **Faite le 4 octobre 2026** : v0.3 relue (15 exigences validées), puis Bloc 4
    relu ; les 25 exigences sont `valide`. Doc 2 passé en **v1.0**. Toute modification ultérieure
    d'une exigence la repasse en `en_revue` (§9.8).
