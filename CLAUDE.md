@@ -78,7 +78,24 @@ le temps (oubli).
 **Hypothèses** : le navigateur autorise le stockage local persistant ; l'API garantit les invariants de
 contenu (§5.5).
 
-## 5. Modèle métier (doc 2 v1.0 du 4 octobre 2026 — les 25 exigences sont `valide`)
+### 4 bis. Objectifs du produit (doc 1, validés le 4 octobre 2026)
+
+| Id | Objectif |
+|---|---|
+| OBJ-01 | Parcours structuré : chaque notion s'appuie sur ses prérequis |
+| OBJ-02 | Autonomie : cours, correction immédiate et compréhensible, progression retrouvée |
+| OBJ-03 | Maîtrise réelle : réussite répétée et non fortuite avant d'acquérir une notion |
+| OBJ-04 | Entraînement renouvelé : exercices variés générés à la demande |
+| OBJ-05 | Motivation par la progression visible (déblocages, écran de réussite), sans XP ni classement |
+| OBJ-06 | Évaluation juste : jamais faux pour une question de forme ; faute de saisie non sanctionnée |
+| OBJ-07 | Protection des mineurs : aucun compte ni information personnelle, progression sur l'appareil ; données techniques inévitables (IP, journaux) → doc 5 |
+
+Chaque exigence du doc 2 porte ses objectifs dans `trace.satisfait` (la correspondance n'est tenue
+que là). Pas de mesure d'usage possible (elle exigerait des données) : réussite établie par tests et
+inspection. Nuance juridique retenue : l'adresse IP vue par le service de contenu peut être une donnée
+personnelle (CJUE, *Breyer*, 2016) ; on ne promet donc pas « aucune donnée collectée ».
+
+## 5. Modèle métier (doc 2 v1.1 en travail — 26 exigences : 25 `valide`, EX-DONNEES-01 `en_revue` ; tag `doc2-v1.0` = 25 exigences)
 
 ### 5.1 Vocabulaire
 
@@ -201,7 +218,7 @@ Diagramme : `assets/graphe-notions.svg`.
 | 5 — Calcul de l'état affiché | EX-ETAT-01, EX-ETAT-02 |
 | 6 — Déblocage | EX-DEBLOC-01 |
 | 7 — Règles de maîtrise | EX-MAITRISE-01, -02, -03 (**-04 supprimée**, redondante avec -02) |
-| 8 — Session et persistance | EX-SESSION-01, EX-SESSION-02 |
+| 8 — Session, persistance et données de l'apprenant | EX-SESSION-01, EX-SESSION-02, EX-DONNEES-01 (aucune information personnelle, progression jamais transmise hors de l'appareil) |
 | 9 — Parcours et écrans | EX-PARCOURS-01, -02, -03 |
 | 10 — Invariants de contenu | INV-CONTENU-01 à -05 |
 | 11 — Génération des exercices | EX-GEN-01 (instanciation), -02 (contraintes de tirage), -03 (forme de la réponse attendue), -04 (choix : une seule proposition correcte) |
@@ -217,7 +234,7 @@ Benjamin a prévu 10 documents. Connus à ce jour :
 
 | N° | Document | État / contenu attendu |
 |---|---|---|
-| 1 | Contexte et objectifs | Matière verrouillée (§2 à §4) ; rédaction non faite à notre connaissance |
+| 1 | Contexte et objectifs | **v0.1 rédigée le 4 octobre 2026** (`doc1-contexte-objectifs/`), à relire |
 | 2 | Spécifications fonctionnelles | **Document actif** |
 | 3 | Architecture technique | Choix de la stack backend |
 | 4 | Modélisation des données & API | — |
@@ -251,9 +268,10 @@ mais sous `docs/02 - Documentation fonctionnelle/` (appelé ci-dessous « racine
 
 ```
 docs/02 - Documentation fonctionnelle/
-  Makefile                      # cibles doc2 et clean
+  Makefile                      # cibles doc1, doc2 et clean
   reference.docx                # styles Word uniquement (gabarit Pandoc par défaut, à personnaliser)
   build/assemble.py             # charge, valide, assemble, appelle Pandoc, produit la traçabilité
+  doc1-contexte-objectifs/      # doc 1 : meta.yml, sommaire.yml, prose/ (pas d'exigences)
   doc2-specifications-fonctionnelles/
     meta.yml                    # titre, version, date, normes, références
     sommaire.yml                # ordre des sections — fait autorité pour l'assemblage
@@ -267,7 +285,7 @@ docs/02 - Documentation fonctionnelle/
 Commandes, depuis la racine de l'atelier (voir aussi le `README.md` qui s'y trouve) :
 
 ```
-make doc2                     # le Makefile utilise python (PYTHON ?= python) ; ailleurs : make doc2 PYTHON=python3
+make doc1 / make doc2         # le Makefile utilise python (PYTHON ?= python) ; ailleurs : make doc2 PYTHON=python3
 python build/assemble.py doc2-specifications-fonctionnelles    # équivalent sans make
 make clean                    # supprime _build/
 ```
@@ -293,7 +311,7 @@ trace:
 ```
 
 - Identifiants : `EX-<DOMAINE>-<NN>` (domaines en usage : ETAT, DEBLOC, MAITRISE, SESSION, PARCOURS,
-  GEN, REPONSE) et `INV-CONTENU-<NN>` ; uniques sur tout le document.
+  GEN, REPONSE, DONNEES) et `INV-CONTENU-<NN>` ; uniques sur tout le document.
 - Une entrée de `sommaire.yml` de source `exigences` regroupe les exigences dont `section` vaut son
   `id`. Renuméroter = changer les `id` du sommaire et les champs `section` ; les noms des fichiers de
   prose ne bougent pas.
@@ -301,8 +319,8 @@ trace:
 **Politique d'échec graduée** :
 - *Bloquant* : YAML non conforme, identifiant en double, `.feature` ou sidecar orphelin, Gherkin non
   parsable, `section` absente du sommaire, `statut` hors vocabulaire.
-- *Avertissement* : statut différent de `valide`, champ optionnel vide (`satisfait`). Aujourd'hui,
-  environ 2 avertissements par exigence : c'est attendu.
+- *Avertissement* : statut différent de `valide`, champ optionnel vide (`satisfait`). Depuis le
+  remplissage de `satisfait` (4 octobre 2026), un avertissement = une exigence pas encore `valide`.
 
 ## 9. Méthode de travail avec Benjamin
 
@@ -363,17 +381,18 @@ trace:
 2. ~~Bloc 4 — validation des réponses~~ **Fait et validé le 4 octobre 2026** (§5.3 bis).
 3. ~~Une notion Maîtrisée reste-t-elle consultable ?~~ **Tranché le 2 octobre 2026** : oui (cours et
    nouveaux exercices, sans effet sur le statut) ; rationale d'EX-PARCOURS-01 mise à jour.
-4. **Document 1** en cours (décisions du 4 octobre 2026) :
+4. **Document 1** : **v0.1 rédigée le 4 octobre 2026**, à relire par Benjamin (décisions du même jour) :
    - rangé à côté du doc 2 dans l'atelier actuel (`doc1-contexte-objectifs/`, cible `make doc1`) ; la
      réorganisation de l'atelier sous `docs/` attendra la spécification de l'atelier ;
    - plan inspiré d'ISO/IEC/IEEE 29148 : objet, contexte et historique, finalité du produit, parties
      prenantes (Benjamin = porteur et commanditaire), objectifs, périmètre, contraintes et hypothèses,
      critères de réussite ;
-   - objectifs du **produit** seulement, identifiants `OBJ-NN` (proposition OBJ-01 à OBJ-07 en attente
-     de validation par Benjamin) ;
+   - objectifs du **produit** seulement, identifiants `OBJ-NN`, OBJ-01 à OBJ-07 validés (§4 bis) ;
    - le doc 1 porte le périmètre au niveau des objectifs ; le doc 2 garde le hors-périmètre détaillé ;
    - remplir `trace.satisfait` des exigences du doc 2 ne rouvre pas leur validation (modification de
-     traçabilité seule, sans toucher scénarios ni rationale).
+     traçabilité seule, sans toucher scénarios ni rationale) : fait pour les 26 exigences ;
+   - OBJ-07 : exigence fonctionnelle EX-DONNEES-01 ajoutée au doc 2 (v1.1, `en_revue`), partie technique
+     et RGPD renvoyée au doc 5.
 5. ~~Relecture du doc 2~~ **Faite le 4 octobre 2026** : v0.3 relue (15 exigences validées), puis Bloc 4
    relu ; les 25 exigences sont `valide`. Doc 2 passé en **v1.0**. Toute modification ultérieure
    d'une exigence la repasse en `en_revue` (§9.8).
