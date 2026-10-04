@@ -8,4 +8,4 @@ rationale: >
   Abordée), pour que la carte du parcours garde la mémoire du travail entamé.
 trace:
   verifie_par: EX-ETAT-02.feature
-  satisfait: []
+  satisfait: [OBJ-01]

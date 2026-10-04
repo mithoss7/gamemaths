@@ -12,4 +12,4 @@ rationale: >
   réponse bien formée, pour chaque type de réponse, est défini au glossaire.
 trace:
   verifie_par: EX-REPONSE-01.feature
-  satisfait: []
+  satisfait: [OBJ-06]

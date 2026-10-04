@@ -9,4 +9,4 @@ rationale: >
   exercice de simplification).
 trace:
   verifie_par: EX-GEN-02.feature
-  satisfait: []
+  satisfait: [OBJ-04]

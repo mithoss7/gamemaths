@@ -9,4 +9,4 @@ rationale: >
   le cours et les exercices ne l'interrompt pas.
 trace:
   verifie_par: EX-SESSION-01.feature
-  satisfait: []
+  satisfait: [OBJ-03]

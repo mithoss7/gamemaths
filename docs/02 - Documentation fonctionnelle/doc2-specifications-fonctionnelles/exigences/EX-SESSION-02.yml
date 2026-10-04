@@ -7,4 +7,4 @@ rationale: >
   et survit au rechargement de l'application.
 trace:
   verifie_par: EX-SESSION-02.feature
-  satisfait: []
+  satisfait: [OBJ-02, OBJ-07]

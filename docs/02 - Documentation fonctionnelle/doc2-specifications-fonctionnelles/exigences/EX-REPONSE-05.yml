@@ -14,4 +14,4 @@ rationale: >
   faute de quoi l'exercice serait évité.
 trace:
   verifie_par: EX-REPONSE-05.feature
-  satisfait: []
+  satisfait: [OBJ-06]

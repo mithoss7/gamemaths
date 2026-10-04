@@ -10,4 +10,4 @@ rationale: >
   l'entrée dans les notions Verrouillées en indiquant le prérequis manquant.
 trace:
   verifie_par: EX-PARCOURS-01.feature
-  satisfait: []
+  satisfait: [OBJ-01]

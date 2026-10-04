@@ -8,4 +8,4 @@ rationale: >
   acyclique.
 trace:
   verifie_par: INV-CONTENU-01.feature
-  satisfait: []
+  satisfait: [OBJ-01]

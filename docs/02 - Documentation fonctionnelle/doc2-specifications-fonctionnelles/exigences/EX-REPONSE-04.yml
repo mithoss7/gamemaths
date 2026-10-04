@@ -8,4 +8,4 @@ rationale: >
   réponse est correcte si et seulement si elle est la réponse attendue.
 trace:
   verifie_par: EX-REPONSE-04.feature
-  satisfait: []
+  satisfait: [OBJ-06]

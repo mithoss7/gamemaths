@@ -10,4 +10,4 @@ rationale: >
   moins fournie.
 trace:
   verifie_par: INV-CONTENU-02.feature
-  satisfait: []
+  satisfait: [OBJ-03, OBJ-04]

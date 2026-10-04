@@ -9,4 +9,4 @@ rationale: >
   corrigerait l'apprenant avec une réponse qu'il jugerait lui-même fausse.
 trace:
   verifie_par: INV-CONTENU-05.feature
-  satisfait: []
+  satisfait: [OBJ-06]

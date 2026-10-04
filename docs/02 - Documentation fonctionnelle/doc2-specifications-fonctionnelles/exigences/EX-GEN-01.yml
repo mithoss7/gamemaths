@@ -9,4 +9,4 @@ rationale: >
   valeurs, ce qui rend l'exercice auto-corrigeable.
 trace:
   verifie_par: EX-GEN-01.feature
-  satisfait: []
+  satisfait: [OBJ-04]

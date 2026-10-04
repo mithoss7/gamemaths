@@ -9,4 +9,4 @@ rationale: >
   zéro. La notion devient Maîtrisée dès que la série atteint N.
 trace:
   verifie_par: EX-MAITRISE-02.feature
-  satisfait: []
+  satisfait: [OBJ-03]

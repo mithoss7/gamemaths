@@ -7,4 +7,4 @@ rationale: >
   notions nouvellement débloquées, ce qui soutient la motivation.
 trace:
   verifie_par: EX-PARCOURS-03.feature
-  satisfait: []
+  satisfait: [OBJ-05]

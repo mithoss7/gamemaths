@@ -7,4 +7,4 @@ rationale: >
   réponse et une explication, conformément à l'intention pédagogique du produit.
 trace:
   verifie_par: EX-PARCOURS-02.feature
-  satisfait: []
+  satisfait: [OBJ-02]

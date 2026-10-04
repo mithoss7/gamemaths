@@ -10,4 +10,4 @@ rationale: >
   atteste d'une compétence sur des exercices distincts.
 trace:
   verifie_par: EX-MAITRISE-03.feature
-  satisfait: []
+  satisfait: [OBJ-03]

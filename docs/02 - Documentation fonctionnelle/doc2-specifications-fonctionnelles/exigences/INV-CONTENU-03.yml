@@ -9,4 +9,4 @@ rationale: >
   héritent toutes les instances qu'il produit.
 trace:
   verifie_par: INV-CONTENU-03.feature
-  satisfait: []
+  satisfait: [OBJ-02]

@@ -10,4 +10,4 @@ rationale: >
   été apprise : la notion N6 n'a pas N4 (Simplifier) parmi ses prérequis.
 trace:
   verifie_par: EX-REPONSE-02.feature
-  satisfait: []
+  satisfait: [OBJ-06]

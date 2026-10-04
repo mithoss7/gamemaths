@@ -11,4 +11,4 @@ rationale: >
   indiquées dans la section « Contenu du MVP ».
 trace:
   verifie_par: EX-REPONSE-03.feature
-  satisfait: []
+  satisfait: [OBJ-06]

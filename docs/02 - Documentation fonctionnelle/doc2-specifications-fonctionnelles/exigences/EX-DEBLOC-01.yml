@@ -8,4 +8,4 @@ rationale: >
   ultérieur ne fait régresser une notion maîtrisée.
 trace:
   verifie_par: EX-DEBLOC-01.feature
-  satisfait: []
+  satisfait: [OBJ-01, OBJ-05]

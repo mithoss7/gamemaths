@@ -7,4 +7,4 @@ rationale: >
   pour garantir la cohérence du calcul des états et des déblocages.
 trace:
   verifie_par: INV-CONTENU-04.feature
-  satisfait: []
+  satisfait: [OBJ-01]

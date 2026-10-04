@@ -11,4 +11,4 @@ rationale: >
   (adresse IP, journaux) relèvent du document 5.
 trace:
   verifie_par: EX-DONNEES-01.feature
-  satisfait: []
+  satisfait: [OBJ-07]

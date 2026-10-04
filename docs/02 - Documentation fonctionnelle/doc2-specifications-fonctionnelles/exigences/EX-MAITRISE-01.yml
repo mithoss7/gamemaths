@@ -10,4 +10,4 @@ rationale: >
   Les règles d'acceptation sont spécifiées en section 12.
 trace:
   verifie_par: EX-MAITRISE-01.feature
-  satisfait: []
+  satisfait: [OBJ-03]
