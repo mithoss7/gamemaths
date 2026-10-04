@@ -1,6 +1,6 @@
 id: EX-GEN-01
 titre: "Instanciation d'un exercice à partir d'un gabarit"
-statut: en_revue
+statut: valide
 section: "11"
 rationale: >
   Les exercices ne sont pas un contenu figé : le système les produit en

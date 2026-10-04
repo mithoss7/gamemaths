@@ -1,6 +1,6 @@
 id: INV-CONTENU-02
 titre: "Capacité de génération d'au moins N exercices distincts par notion"
-statut: en_revue
+statut: valide
 section: "10"
 rationale: >
   Avec la génération paramétrique, une notion doit pouvoir produire au moins N

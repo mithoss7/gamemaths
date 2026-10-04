@@ -1,6 +1,6 @@
 id: INV-CONTENU-04
 titre: "Références de prérequis valides"
-statut: en_revue
+statut: valide
 section: "10"
 rationale: >
   Tout identifiant de prérequis doit désigner une notion existante du graphe,

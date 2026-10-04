@@ -1,6 +1,6 @@
 id: EX-ETAT-01
 titre: "Verrouillage d'une notion selon ses prérequis"
-statut: en_revue
+statut: valide
 section: "5"
 rationale: >
   L'accès à une notion dépend de l'état de ses prérequis. Une notion sans

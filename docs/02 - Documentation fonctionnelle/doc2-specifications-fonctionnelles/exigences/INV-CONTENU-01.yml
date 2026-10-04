@@ -1,6 +1,6 @@
 id: INV-CONTENU-01
 titre: "Graphe des notions sans cycle"
-statut: en_revue
+statut: valide
 section: "10"
 rationale: >
   Un cycle de prérequis rendrait certaines notions définitivement

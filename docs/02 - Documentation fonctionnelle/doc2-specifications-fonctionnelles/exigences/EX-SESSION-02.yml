@@ -1,6 +1,6 @@
 id: EX-SESSION-02
 titre: "Persistance de la progression durable"
-statut: en_revue
+statut: valide
 section: "8"
 rationale: >
   Le statut durable d'une notion (Abordée ou Maîtrisée) est persisté localement
