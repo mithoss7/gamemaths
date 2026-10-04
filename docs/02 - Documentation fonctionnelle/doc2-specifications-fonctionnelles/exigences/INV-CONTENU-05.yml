@@ -1,0 +1,12 @@
+id: INV-CONTENU-05
+titre: "Cohérence entre réponse attendue et règle d'acceptation"
+statut: en_revue
+section: "10"
+rationale: >
+  La réponse attendue est la réponse de référence montrée en correction. Si la
+  règle d'acceptation de son propre gabarit pouvait la refuser (par exemple une
+  réponse attendue non irréductible sous une règle « irréductible »), le système
+  corrigerait l'apprenant avec une réponse qu'il jugerait lui-même fausse.
+trace:
+  verifie_par: INV-CONTENU-05.feature
+  satisfait: []
