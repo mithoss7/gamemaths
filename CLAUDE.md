@@ -80,8 +80,9 @@ contenu (§5.5).
 
 - **Notion** : unité d'apprentissage (identifiant, titre, cours, gabarits d'exercices, prérequis).
 - **Prérequis** : notion qui doit être Maîtrisée avant qu'une autre devienne accessible.
-- **Exercice** : question fermée à réponse unique (énoncé, réponse attendue, type de réponse,
-  explication), produite comme instance d'un gabarit.
+- **Exercice** : question fermée (énoncé, type de réponse, réponse attendue, explication), produite
+  comme instance d'un gabarit ; la réponse soumise est jugée par la règle d'acceptation du gabarit.
+  Plus « à réponse unique » depuis le Bloc 4 : plusieurs réponses peuvent être correctes.
 - **Gabarit** : modèle paramétré d'exercice rattaché à une notion (§5.4).
 - **Instance** : exercice concret tiré d'un gabarit. Valeurs différentes ⇒ exercices différents ;
   même gabarit et mêmes valeurs ⇒ même exercice (décision du 2 octobre 2026).
@@ -92,6 +93,17 @@ contenu (§5.5).
 - **Série** : réussites consécutives, sur des instances distinctes, dans une même session.
   Volatile : naît à 0, perdue en fin de session.
 - **N** : nombre de réussites requises pour maîtriser une notion. Paramètre configurable, défaut 3.
+- **Type de réponse** : entier · fraction · comparateur (<, >, =) · couple de fractions · choix parmi
+  des propositions.
+- **Réponse bien formée** : saisie conforme au type de réponse (espaces ignorés ; fraction = entier
+  naturel ou a/b, b non nul ; une écriture décimale n'est pas une fraction bien formée).
+- **Forme irréductible** : numérateur et dénominateur sans diviseur commun autre que 1 ; une valeur
+  entière s'écrit comme l'entier lui-même (2, pas 2/1).
+- **Réponse attendue** : réponse correcte *de référence*, montrée en correction ; quand plusieurs
+  réponses sont correctes, elle est l'une d'elles (terme conservé, redéfini : décision QD-a).
+- **Règle d'acceptation** (portée par le gabarit) : *identité* (exactement la réponse attendue),
+  *valeur* (même valeur, toute écriture), *irréductible* (forme irréductible seulement),
+  *condition* (propriété définie par le gabarit ; plusieurs réponses correctes possibles).
 
 ### 5.2 Deux niveaux d'état — distinction critique
 
@@ -126,10 +138,25 @@ Benjamin a corrigé explicitement ce type d'erreur.
 - Après une erreur : affichage de la bonne réponse et de l'explication.
 - À la maîtrise : écran de réussite listant exactement les notions nouvellement débloquées.
 
+### 5.3 bis Validation des réponses (Bloc 4, décisions du 4 octobre 2026)
+
+- Une saisie **non bien formée** (faute de frappe, écriture décimale pour une fraction…) est refusée
+  avant évaluation : ni réussite, ni erreur, ni tentative ; série et statut durable inchangés
+  (EX-REPONSE-01). Une *tentative* = soumission d'une réponse bien formée.
+- Règle par notion : **irréductible** pour N4 et N8, **valeur** pour N1, N3 (lecture), N6 ;
+  **identité** pour les entiers (N2), comparateurs (N5), choix (N3) ; **condition** pour N7 (même
+  dénominateur, tout dénominateur commun accepté) et pour « une autre fraction égale » en N2 (la
+  fraction donnée est refusée). Tableau dans la section « Contenu du MVP » du doc 2.
+- Mode valeur : un résultat entier s'écrit `1` ou `4/4` ; mode irréductible : `1` seulement.
+- La réponse attendue (montrée en correction) est irréductible ; pour N7, avec le plus petit
+  dénominateur commun (EX-GEN-03). Un exercice à choix a exactement une proposition correcte (EX-GEN-04).
+- N3 se limite à lire la droite et à choisir parmi des points proposés ; placement graphique et
+  manière de saisir renvoyés au doc 7.
+
 ### 5.4 Génération paramétrique des exercices
 
-- **Gabarit** = type d'exercice + paramètres + contraintes de tirage + règle de calcul de la réponse
-  attendue + explication. Le système l'instancie en tirant des valeurs ; la réponse attendue est
+- **Gabarit** = type d'exercice + type de réponse + paramètres + contraintes de tirage + règle de calcul
+  de la réponse attendue + règle d'acceptation + explication. Le système l'instancie en tirant des valeurs ; la réponse attendue est
   calculée de façon déterministe. (Modèle proposé mi-juin 2026, non amendé par Benjamin.)
 - Génération **paramétrique** retenue (pas de génération par IA ni de texte libre).
 - **Décision A** : « même exercice » = même *instance*.
@@ -143,6 +170,8 @@ Benjamin a corrigé explicitement ce type d'erreur.
 - **INV-CONTENU-02** : chaque notion peut produire au moins N instances distinctes.
 - **INV-CONTENU-03** : chaque gabarit porte une explication non vide, héritée par ses instances.
 - **INV-CONTENU-04** : tout prérequis référence une notion existante.
+- **INV-CONTENU-05** : la réponse attendue de toute instance satisfait la règle d'acceptation de son
+  gabarit (Bloc 4).
 
 ### 5.6 Graphe des notions du MVP (granularité révisable)
 
@@ -168,9 +197,10 @@ Diagramme : `assets/graphe-notions.svg`.
 | 7 — Règles de maîtrise | EX-MAITRISE-01, -02, -03 (**-04 supprimée**, redondante avec -02) |
 | 8 — Session et persistance | EX-SESSION-01, EX-SESSION-02 |
 | 9 — Parcours et écrans | EX-PARCOURS-01, -02, -03 |
-| 10 — Invariants de contenu | INV-CONTENU-01 à -04 |
-| 11 — Génération des exercices | EX-GEN-01 (instanciation), EX-GEN-02 (respect des contraintes de tirage) |
-| 12 à 14 (prose) | Graphe des notions · Hors périmètre · Points en suspens |
+| 10 — Invariants de contenu | INV-CONTENU-01 à -05 |
+| 11 — Génération des exercices | EX-GEN-01 (instanciation), -02 (contraintes de tirage), -03 (forme de la réponse attendue), -04 (choix : une seule proposition correcte) |
+| 12 — Validation des réponses | EX-REPONSE-01 (saisie non bien formée), -02 (valeur), -03 (irréductible), -04 (identité), -05 (condition) |
+| 13 à 15 (prose) | Contenu du MVP (graphe + types de réponse par notion) · Hors périmètre · Points en suspens |
 
 Sections 1 à 4 : introduction, description générale, définitions (glossaire), modèle d'états.
 Structure inspirée d'ISO/IEC/IEEE 29148.
@@ -257,7 +287,7 @@ trace:
 ```
 
 - Identifiants : `EX-<DOMAINE>-<NN>` (domaines en usage : ETAT, DEBLOC, MAITRISE, SESSION, PARCOURS,
-  GEN) et `INV-CONTENU-<NN>` ; uniques sur tout le document.
+  GEN, REPONSE) et `INV-CONTENU-<NN>` ; uniques sur tout le document.
 - Une entrée de `sommaire.yml` de source `exigences` regroupe les exigences dont `section` vaut son
   `id`. Renuméroter = changer les `id` du sommaire et les champs `section` ; les noms des fichiers de
   prose ne bougent pas.
@@ -323,9 +353,8 @@ trace:
 1. ~~Vérifier l'état du dépôt~~ **Fait le 2 octobre 2026** : corrections de la relecture v0.2 et
    fragments de mi-juin sur la génération tous appliqués (commit « Bloc 3 Terminé » du 14 juin) ;
    build à 17 exigences, 0 erreur bloquante.
-2. **Bloc 4 — validation des réponses par type d'exercice** (prochain chantier) : écritures
-   équivalentes (½, 2/4, 0,5), forme irréductible exigée ou non, comparateurs `<` `>` `=`, résultat
-   simplifié attendu. Dépend du *type d'exercice* du gabarit ; complétera les règles de maîtrise.
+2. **Bloc 4 — validation des réponses** : rédigé le 4 octobre 2026 (§5.3 bis), en `en_revue`, en attente
+   de la relecture de Benjamin (avec EX-MAITRISE-01 et -02).
 3. ~~Une notion Maîtrisée reste-t-elle consultable ?~~ **Tranché le 2 octobre 2026** : oui (cours et
    nouveaux exercices, sans effet sur le statut) ; rationale d'EX-PARCOURS-01 mise à jour.
 4. **Document 1** à rédiger ; donner des identifiants stables aux objectifs pour remplir
