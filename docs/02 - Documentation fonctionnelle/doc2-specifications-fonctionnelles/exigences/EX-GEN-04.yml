@@ -1,6 +1,6 @@
 id: EX-GEN-04
 titre: "Une seule proposition correcte dans un exercice à choix"
-statut: en_revue
+statut: valide
 section: "11"
 rationale: >
   Le système garantit qu'un exercice à choix (par exemple « lequel des points A,

@@ -1,6 +1,6 @@
 id: INV-CONTENU-05
 titre: "Cohérence entre réponse attendue et règle d'acceptation"
-statut: en_revue
+statut: valide
 section: "10"
 rationale: >
   La réponse attendue est la réponse de référence montrée en correction. Si la

@@ -1,6 +1,6 @@
 id: EX-REPONSE-04
 titre: "Règle « identité » : la réponse doit être exactement la réponse attendue"
-statut: en_revue
+statut: valide
 section: "12"
 rationale: >
   Pour les types de réponse qui n'admettent qu'une écriture (un entier, un

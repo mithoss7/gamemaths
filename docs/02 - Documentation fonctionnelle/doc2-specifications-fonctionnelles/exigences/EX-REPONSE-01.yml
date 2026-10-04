@@ -1,6 +1,6 @@
 id: EX-REPONSE-01
 titre: "Refus sans évaluation d'une saisie non bien formée"
-statut: en_revue
+statut: valide
 section: "12"
 rationale: >
   Avec un seul essai par exercice (EX-MAITRISE-01), une faute de frappe ou une

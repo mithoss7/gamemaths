@@ -1,6 +1,6 @@
 id: EX-MAITRISE-01
 titre: "Un seul essai par exercice"
-statut: en_revue
+statut: valide
 section: "7"
 rationale: >
   Chaque exercice n'accepte qu'une seule réponse, définitive. Cette règle donne
