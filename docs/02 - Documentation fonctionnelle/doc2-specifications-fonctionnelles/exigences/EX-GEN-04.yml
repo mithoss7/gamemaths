@@ -1,0 +1,13 @@
+id: EX-GEN-04
+titre: "Une seule proposition correcte dans un exercice à choix"
+statut: en_revue
+section: "11"
+rationale: >
+  Le système garantit qu'un exercice à choix (par exemple « lequel des points A,
+  B, C ou D correspond à la fraction donnée ? ») ne peut jamais présenter deux
+  propositions identiques ni plusieurs propositions correctes : la règle
+  « identité » (EX-REPONSE-04) n'a de sens que si une seule proposition est la
+  réponse attendue.
+trace:
+  verifie_par: EX-GEN-04.feature
+  satisfait: []
