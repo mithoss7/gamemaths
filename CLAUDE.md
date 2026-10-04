@@ -326,8 +326,8 @@ trace:
      pas `valide`, `v1.0` à la première version entièrement validée. Claude ne peut pas pousser de tag
      (refus 403 de l'environnement) : Benjamin les crée via une release GitHub (tag léger ; la release
      peut porter le `.docx` généré). Tags posés : `archive/avant-pivot`, `doc2-v0.2`, `doc2-v0.3`
-     (4 octobre 2026, après relecture ; release avec le `.docx`). À poser : `doc2-v1.0`, après fusion
-     sur `main` de la version 1.0.
+     (4 octobre 2026, après relecture) et `doc2-v1.0` (4 octobre 2026, toutes exigences validées) ;
+     releases avec le `.docx`.
 5. **Vérifier les répercussions** de toute modification : glossaire, autres exigences, invariants,
    sommaire, points en suspens.
 6. **Séparer « action requise » et « remarque pour info »** (leur mélange a déjà semé la confusion).
