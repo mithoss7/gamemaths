@@ -1,0 +1,11 @@
+id: EX-REPONSE-04
+titre: "Règle « identité » : la réponse doit être exactement la réponse attendue"
+statut: en_revue
+section: "12"
+rationale: >
+  Pour les types de réponse qui n'admettent qu'une écriture (un entier, un
+  comparateur <, > ou =, une proposition choisie parmi celles affichées), la
+  réponse est correcte si et seulement si elle est la réponse attendue.
+trace:
+  verifie_par: EX-REPONSE-04.feature
+  satisfait: []

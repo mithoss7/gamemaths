@@ -1,0 +1,17 @@
+id: EX-REPONSE-05
+titre: "Règle « condition » : plusieurs réponses peuvent être correctes"
+statut: en_revue
+section: "12"
+rationale: >
+  Certains exercices admettent plusieurs bonnes réponses : deux fractions
+  peuvent être mises au même dénominateur avec 6, 12, 18… ; une fraction admet
+  une infinité d'écritures égales. Le gabarit définit alors une condition que
+  la réponse doit vérifier, et toute réponse qui la vérifie est correcte, même
+  si elle diffère de la réponse attendue (qui n'est que la réponse de référence
+  montrée en correction). Pour une mise au même dénominateur, tout dénominateur
+  commun est accepté : la compétence visée est d'en trouver un, pas le plus
+  petit. Pour une autre écriture d'une fraction, la fraction donnée est refusée,
+  faute de quoi l'exercice serait évité.
+trace:
+  verifie_par: EX-REPONSE-05.feature
+  satisfait: []
