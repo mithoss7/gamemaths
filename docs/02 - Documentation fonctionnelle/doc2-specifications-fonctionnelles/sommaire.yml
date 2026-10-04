@@ -24,7 +24,7 @@ sections:
     titre: "Exigences — Règles de maîtrise"
     source: "exigences"
   - id: "8"
-    titre: "Exigences — Session et persistance"
+    titre: "Exigences — Session, persistance et données de l'apprenant"
     source: "exigences"
   - id: "9"
     titre: "Exigences — Parcours et écrans"

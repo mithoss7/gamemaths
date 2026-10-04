@@ -1,0 +1,14 @@
+id: EX-DONNEES-01
+titre: "Aucune information personnelle demandée, progression conservée sur l'appareil"
+statut: en_revue
+section: "8"
+rationale: >
+  Le public est mineur. Le produit ne demande donc aucune information
+  personnelle et ne transmet jamais la progression hors de l'appareil : sans
+  cette exigence, rien ne garantirait de façon testable que la progression ne
+  part pas vers un serveur ou un service de statistiques. Les données
+  techniques inévitables lors des échanges avec le service de contenu
+  (adresse IP, journaux) relèvent du document 5.
+trace:
+  verifie_par: EX-DONNEES-01.feature
+  satisfait: []

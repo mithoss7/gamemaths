@@ -8,13 +8,14 @@ appareils au stade du MVP.
 ## Caractéristiques des utilisateurs
 
 Utilisateur unique : un collégien (environ 11 à 15 ans) travaillant en
-autonomie. Aucune donnée personnelle n'est collectée par le système.
+autonomie. Aucune information personnelle ne lui est demandée et sa progression
+reste sur son appareil (EX-DONNEES-01).
 
 ## Contraintes
 
 - Front-end développé avec Angular.
 - Méthode documentaire : exigences vérifiables, exprimées en Gherkin, traçables par identifiant.
-- Cible mineurs : minimisation des données (satisfaite par l'absence de compte).
+- Cible mineurs : minimisation des données (absence de compte, EX-DONNEES-01 ; données techniques : document 5).
 
 ## Hypothèses et dépendances
 
