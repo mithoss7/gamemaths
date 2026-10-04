@@ -1,0 +1,13 @@
+id: EX-REPONSE-02
+titre: "Règle « valeur » : toute écriture de la bonne valeur est acceptée"
+statut: en_revue
+section: "12"
+rationale: >
+  Pour la plupart des notions, la compétence évaluée n'est pas la
+  simplification : une fraction égale à la réponse attendue, quelle que soit son
+  écriture, est donc correcte, et une valeur entière peut s'écrire comme entier
+  ou comme fraction. C'est indispensable là où la simplification n'a pas encore
+  été apprise : la notion N6 n'a pas N4 (Simplifier) parmi ses prérequis.
+trace:
+  verifie_par: EX-REPONSE-02.feature
+  satisfait: []

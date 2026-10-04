@@ -1,0 +1,14 @@
+id: EX-REPONSE-03
+titre: "Règle « irréductible » : seule la forme irréductible est acceptée"
+statut: en_revue
+section: "12"
+rationale: >
+  Là où la simplification fait partie de la compétence évaluée, seule la forme
+  irréductible de la bonne valeur est correcte. Une valeur entière doit alors
+  s'écrire comme un entier : une fraction de dénominateur 1 a bien un numérateur
+  et un dénominateur sans diviseur commun, mais elle n'est pas la forme
+  irréductible d'un entier (voir le glossaire). Les notions concernées sont
+  indiquées dans la section « Contenu du MVP ».
+trace:
+  verifie_par: EX-REPONSE-03.feature
+  satisfait: []
