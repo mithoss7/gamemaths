@@ -1,0 +1,15 @@
+id: EX-REPONSE-01
+titre: "Refus sans évaluation d'une saisie non bien formée"
+statut: en_revue
+section: "12"
+rationale: >
+  Avec un seul essai par exercice (EX-MAITRISE-01), une faute de frappe ou une
+  écriture hors format (par exemple une écriture décimale pour une fraction)
+  coûterait la série sans rapport avec la compétence évaluée. Une saisie non
+  bien formée est donc refusée avant toute évaluation : elle ne compte ni comme
+  réussite, ni comme erreur, ni comme tentative. Le refus porte sur la forme
+  seulement et ne révèle rien sur la justesse de la réponse. Ce qu'est une
+  réponse bien formée, pour chaque type de réponse, est défini au glossaire.
+trace:
+  verifie_par: EX-REPONSE-01.feature
+  satisfait: []
