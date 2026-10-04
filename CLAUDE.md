@@ -74,7 +74,7 @@ le temps (oubli).
 **Hypothèses** : le navigateur autorise le stockage local persistant ; l'API garantit les invariants de
 contenu (§5.5).
 
-## 5. Modèle métier (doc 2 v0.3 — 15 exigences `valide`, EX-MAITRISE-01 et -02 en `en_revue` en attente du Bloc 4)
+## 5. Modèle métier (doc 2 v1.0 du 4 octobre 2026 — les 25 exigences sont `valide`)
 
 ### 5.1 Vocabulaire
 
@@ -326,7 +326,8 @@ trace:
      pas `valide`, `v1.0` à la première version entièrement validée. Claude ne peut pas pousser de tag
      (refus 403 de l'environnement) : Benjamin les crée via une release GitHub (tag léger ; la release
      peut porter le `.docx` généré). Tags posés : `archive/avant-pivot`, `doc2-v0.2`, `doc2-v0.3`
-     (4 octobre 2026, après relecture ; release avec le `.docx`).
+     (4 octobre 2026, après relecture ; release avec le `.docx`). À poser : `doc2-v1.0`, après fusion
+     sur `main` de la version 1.0.
 5. **Vérifier les répercussions** de toute modification : glossaire, autres exigences, invariants,
    sommaire, points en suspens.
 6. **Séparer « action requise » et « remarque pour info »** (leur mélange a déjà semé la confusion).
@@ -355,14 +356,14 @@ trace:
 1. ~~Vérifier l'état du dépôt~~ **Fait le 2 octobre 2026** : corrections de la relecture v0.2 et
    fragments de mi-juin sur la génération tous appliqués (commit « Bloc 3 Terminé » du 14 juin) ;
    build à 17 exigences, 0 erreur bloquante.
-2. **Bloc 4 — validation des réponses** : rédigé le 4 octobre 2026 (§5.3 bis), en `en_revue`, en attente
-   de la relecture de Benjamin (avec EX-MAITRISE-01 et -02).
+2. ~~Bloc 4 — validation des réponses~~ **Fait et validé le 4 octobre 2026** (§5.3 bis).
 3. ~~Une notion Maîtrisée reste-t-elle consultable ?~~ **Tranché le 2 octobre 2026** : oui (cours et
    nouveaux exercices, sans effet sur le statut) ; rationale d'EX-PARCOURS-01 mise à jour.
 4. **Document 1** à rédiger ; donner des identifiants stables aux objectifs pour remplir
    `trace.satisfait`. Les objectifs de succès n'ont pas été formulés depuis le pivot.
-5. **Relecture du doc 2** : faite le 4 octobre 2026 sur la v0.3. 15 exigences passées à `valide` ;
-   EX-MAITRISE-01 et -02 restent `en_revue` car le Bloc 4 les complétera (option b de Benjamin).
+5. ~~Relecture du doc 2~~ **Faite le 4 octobre 2026** : v0.3 relue (15 exigences validées), puis Bloc 4
+   relu ; les 25 exigences sont `valide`. Doc 2 passé en **v1.0**. Toute modification ultérieure
+   d'une exigence la repasse en `en_revue` (§9.8).
 6. **Documents suivants** : 3 (architecture, stack backend), 4, 5 (sécurité), 6 (non fonctionnel),
    7 (UX), 8 (stratégie de tests).
 7. **Atelier, décisions différées** : intégration continue, désormais sur GitHub (GitHub Actions) et non
