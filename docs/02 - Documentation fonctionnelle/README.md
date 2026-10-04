@@ -9,22 +9,23 @@ par Pandoc. Le `.docx` est un **artéfact généré**, jamais une source.
 - `pandoc` (rendu Word)
 - `python3` + `PyYAML`
 
-## Générer le document 2
+## Générer les documents
 
 Depuis la racine du dépôt :
 
 ```
 cd "docs/02 - Documentation fonctionnelle"
-make doc2
+make doc1        # document 1 — Contexte et objectifs
+make doc2        # document 2 — Spécifications fonctionnelles
 ```
 
 Le `Makefile` appelle `python` ; là où la commande s'appelle `python3` :
 `make doc2 PYTHON=python3`.
 
-Sorties (non versionnées) dans
+Sorties (non versionnées) dans `<document>/_build/`, par exemple
 `doc2-specifications-fonctionnelles/_build/` :
 
-- `doc2-specifications-fonctionnelles.docx` — le document
+- `<document>.docx` — le document
 - `document.md` — le Markdown intermédiaire assemblé
 - `tracabilite.md` — la matrice de traçabilité
 
