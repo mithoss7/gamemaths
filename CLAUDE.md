@@ -95,7 +95,7 @@ que là). Pas de mesure d'usage possible (elle exigerait des données) : réussi
 inspection. Nuance juridique retenue : l'adresse IP vue par le service de contenu peut être une donnée
 personnelle (CJUE, *Breyer*, 2016) ; on ne promet donc pas « aucune donnée collectée ».
 
-## 5. Modèle métier (doc 2 v1.1 en travail — 26 exigences : 25 `valide`, EX-DONNEES-01 `en_revue` ; tag `doc2-v1.0` = 25 exigences)
+## 5. Modèle métier (doc 2 v1.1 du 4 octobre 2026 — les 26 exigences sont `valide`)
 
 ### 5.1 Vocabulaire
 
@@ -234,7 +234,7 @@ Benjamin a prévu 10 documents. Connus à ce jour :
 
 | N° | Document | État / contenu attendu |
 |---|---|---|
-| 1 | Contexte et objectifs | **v0.1 rédigée le 4 octobre 2026** (`doc1-contexte-objectifs/`), à relire |
+| 1 | Contexte et objectifs | **v1.0 validée le 4 octobre 2026** (`doc1-contexte-objectifs/`) |
 | 2 | Spécifications fonctionnelles | **Document actif** |
 | 3 | Architecture technique | Choix de la stack backend |
 | 4 | Modélisation des données & API | — |
@@ -345,11 +345,14 @@ trace:
      qu'après sa décision.
    - Tags : pas de tag sans demande explicite. Un tag par version de document, convention
      **`docN-vX.Y`** (ex. `doc2-v0.3`), validée le 2 octobre 2026 : `v0.X` tant que des exigences ne sont
-     pas `valide`, `v1.0` à la première version entièrement validée. Claude ne peut pas pousser de tag
+     pas `valide`, `v1.0` à la première version entièrement validée. Après la v1.0 : toute
+     évolution ouvre une version `v1.(x+1)` de travail, taguée quand toutes ses exigences sont à nouveau
+     `valide` (décision du 4 octobre 2026). Un document sans exigences (doc 1) passe en v1.0 quand
+     Benjamin le valide. Claude ne peut pas pousser de tag
      (refus 403 de l'environnement) : Benjamin les crée via une release GitHub (tag léger ; la release
      peut porter le `.docx` généré). Tags posés : `archive/avant-pivot`, `doc2-v0.2`, `doc2-v0.3`
      (4 octobre 2026, après relecture) et `doc2-v1.0` (4 octobre 2026, toutes exigences validées) ;
-     releases avec le `.docx`.
+     releases avec le `.docx`. À poser après fusion : `doc1-v1.0` et `doc2-v1.1`.
 5. **Vérifier les répercussions** de toute modification : glossaire, autres exigences, invariants,
    sommaire, points en suspens.
 6. **Séparer « action requise » et « remarque pour info »** (leur mélange a déjà semé la confusion).
@@ -381,7 +384,7 @@ trace:
 2. ~~Bloc 4 — validation des réponses~~ **Fait et validé le 4 octobre 2026** (§5.3 bis).
 3. ~~Une notion Maîtrisée reste-t-elle consultable ?~~ **Tranché le 2 octobre 2026** : oui (cours et
    nouveaux exercices, sans effet sur le statut) ; rationale d'EX-PARCOURS-01 mise à jour.
-4. **Document 1** : **v0.1 rédigée le 4 octobre 2026**, à relire par Benjamin (décisions du même jour) :
+4. ~~Document 1~~ **v1.0 validée le 4 octobre 2026** (décisions du même jour) :
    - rangé à côté du doc 2 dans l'atelier actuel (`doc1-contexte-objectifs/`, cible `make doc1`) ; la
      réorganisation de l'atelier sous `docs/` attendra la spécification de l'atelier ;
    - plan inspiré d'ISO/IEC/IEEE 29148 : objet, contexte et historique, finalité du produit, parties
@@ -391,7 +394,7 @@ trace:
    - le doc 1 porte le périmètre au niveau des objectifs ; le doc 2 garde le hors-périmètre détaillé ;
    - remplir `trace.satisfait` des exigences du doc 2 ne rouvre pas leur validation (modification de
      traçabilité seule, sans toucher scénarios ni rationale) : fait pour les 26 exigences ;
-   - OBJ-07 : exigence fonctionnelle EX-DONNEES-01 ajoutée au doc 2 (v1.1, `en_revue`), partie technique
+   - OBJ-07 : exigence fonctionnelle EX-DONNEES-01 ajoutée au doc 2 (v1.1, validée), partie technique
      et RGPD renvoyée au doc 5.
 5. ~~Relecture du doc 2~~ **Faite le 4 octobre 2026** : v0.3 relue (15 exigences validées), puis Bloc 4
    relu ; les 25 exigences sont `valide`. Doc 2 passé en **v1.0**. Toute modification ultérieure
