@@ -74,7 +74,7 @@ le temps (oubli).
 **Hypothèses** : le navigateur autorise le stockage local persistant ; l'API garantit les invariants de
 contenu (§5.5).
 
-## 5. Modèle métier (doc 2 — toutes les exigences sont en statut `en_revue`)
+## 5. Modèle métier (doc 2 v0.3 — 15 exigences `valide`, EX-MAITRISE-01 et -02 en `en_revue` en attente du Bloc 4)
 
 ### 5.1 Vocabulaire
 
@@ -299,8 +299,9 @@ trace:
 6. **Séparer « action requise » et « remarque pour info »** (leur mélange a déjà semé la confusion).
 7. **Après toute modification des sources**, lancer le build et rapporter : erreurs bloquantes,
    nombre d'exigences chargées, nombre d'avertissements.
-8. **Ne jamais passer une exigence à `valide`** : seule la relecture de Benjamin le fait. Les exigences
-   proposées jusqu'ici l'ont été en `en_revue`.
+8. **Ne jamais passer une exigence à `valide` de sa propre initiative** : seule la relecture de Benjamin
+   le décide. Toute exigence nouvelle ou modifiée est proposée en `en_revue` ; une exigence `valide`
+   que l'on modifie repasse en `en_revue`.
 
 ### Règles d'écriture des exigences (issues de ses relectures)
 
@@ -331,7 +332,8 @@ trace:
    nouveaux exercices, sans effet sur le statut) ; rationale d'EX-PARCOURS-01 mise à jour.
 4. **Document 1** à rédiger ; donner des identifiants stables aux objectifs pour remplir
    `trace.satisfait`. Les objectifs de succès n'ont pas été formulés depuis le pivot.
-5. **Relecture du doc 2**, puis passage des statuts à `valide`.
+5. **Relecture du doc 2** : faite le 4 octobre 2026 sur la v0.3. 15 exigences passées à `valide` ;
+   EX-MAITRISE-01 et -02 restent `en_revue` car le Bloc 4 les complétera (option b de Benjamin).
 6. **Documents suivants** : 3 (architecture, stack backend), 4, 5 (sécurité), 6 (non fonctionnel),
    7 (UX), 8 (stratégie de tests).
 7. **Atelier, décisions différées** : intégration continue, désormais sur GitHub (GitHub Actions) et non
