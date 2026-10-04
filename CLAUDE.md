@@ -293,7 +293,8 @@ trace:
      **`docN-vX.Y`** (ex. `doc2-v0.3`), validée le 2 octobre 2026 : `v0.X` tant que des exigences ne sont
      pas `valide`, `v1.0` à la première version entièrement validée. Claude ne peut pas pousser de tag
      (refus 403 de l'environnement) : Benjamin les crée via une release GitHub (tag léger ; la release
-     peut porter le `.docx` généré). Le doc 2 v0.3 sera tagué après la relecture de Benjamin.
+     peut porter le `.docx` généré). Tags posés : `archive/avant-pivot`, `doc2-v0.2`, `doc2-v0.3`
+     (4 octobre 2026, après relecture ; release avec le `.docx`).
 5. **Vérifier les répercussions** de toute modification : glossaire, autres exigences, invariants,
    sommaire, points en suspens.
 6. **Séparer « action requise » et « remarque pour info »** (leur mélange a déjà semé la confusion).
@@ -319,12 +320,9 @@ trace:
 
 ## 10. Prochaines étapes et points ouverts
 
-1. **Vérifier l'état du dépôt** : les corrections issues de la relecture du doc 2 v0.2 (EX-MAITRISE-04
-   supprimée, scénarios génériques en N, EX-MAITRISE-03 en garantie, EX-PARCOURS-01 à quatre scénarios,
-   génération retirée du hors périmètre, transitions du modèle d'états reformulées) et les fragments
-   de mi-juin 2026 sur la génération (termes « Gabarit » et « Instance » dans le glossaire, sommaire renuméroté 10 → 14,
-   EX-GEN-01/02, INV-CONTENU-02 et -03 reformulés, points en suspens à jour) sont-ils appliqués ?
-   Build attendu : **17 exigences**, 0 erreur bloquante.
+1. ~~Vérifier l'état du dépôt~~ **Fait le 2 octobre 2026** : corrections de la relecture v0.2 et
+   fragments de mi-juin sur la génération tous appliqués (commit « Bloc 3 Terminé » du 14 juin) ;
+   build à 17 exigences, 0 erreur bloquante.
 2. **Bloc 4 — validation des réponses par type d'exercice** (prochain chantier) : écritures
    équivalentes (½, 2/4, 0,5), forme irréductible exigée ou non, comparateurs `<` `>` `=`, résultat
    simplifié attendu. Dépend du *type d'exercice* du gabarit ; complétera les règles de maîtrise.
@@ -344,10 +342,13 @@ trace:
 
 - Le `.docx` v0.2 du doc 2 (2026-06-02) était **antérieur aux corrections** (EX-MAITRISE-04, génération
   hors périmètre). Retiré du dépôt le 2 octobre 2026 ; `make doc2` produit la version à jour.
-- À l'import initial, le dézippage avait créé un dossier intermédiaire (`docs/GameMaths-docs/docs/`) :
-  vérifier que les sources sont bien directement sous `docs/`.
-- Les `.feature` n'ont peut-être pas l'en-tête `# language: fr`. Sans lui, un parseur Gherkin standard
-  (Cucumber, behave…) lit les mots-clés en anglais : à trancher avant de brancher des tests exécutables.
+- Le dossier intermédiaire créé à l'import initial (`docs/GameMaths-docs/docs/`) n'existe pas dans le
+  dépôt (vérifié le 2 octobre 2026). Les sources sont sous `docs/02 - Documentation fonctionnelle/` (§8).
+- Les `.feature` n'ont **pas** l'en-tête `# language: fr` (vérifié le 2 octobre 2026). Avec le parseur
+  Gherkin officiel : 0/17 analysés en langue par défaut (anglais), 17/17 en français. **Piège** : ajouter
+  l'en-tête casserait le build, car `assemble.py` exige que la première ligne non vide commence par
+  `Fonctionnalité:` (`_gherkin_ok`). Alternative : régler la langue dans l'outil de test. À trancher
+  avant de brancher des tests exécutables ; toute adaptation d'`assemble.py` part des critères `@ATL-*`.
 
 ## 12. Tenir ce fichier à jour
 
