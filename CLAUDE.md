@@ -148,8 +148,10 @@ Benjamin a corrigé explicitement ce type d'erreur.
   dénominateur, tout dénominateur commun accepté) et pour « une autre fraction égale » en N2 (la
   fraction donnée est refusée). Tableau dans la section « Contenu du MVP » du doc 2.
 - Mode valeur : un résultat entier s'écrit `1` ou `4/4` ; mode irréductible : `1` seulement.
-- La réponse attendue (montrée en correction) est irréductible ; pour N7, avec le plus petit
-  dénominateur commun (EX-GEN-03). Un exercice à choix a exactement une proposition correcte (EX-GEN-04).
+- La réponse attendue (montrée en correction) : en mode **valeur** (N1, N3, N6), le **résultat direct
+  du calcul, sans simplification** (`4/6` pour 5/6 − 1/6), la forme irréductible restant acceptée ; en
+  mode **irréductible** (N4, N8), la forme irréductible ; pour N7, le plus petit dénominateur commun
+  (EX-GEN-03). Pas de renvoi vers le cours de N4 (décision du 4 octobre 2026). Un exercice à choix a exactement une proposition correcte (EX-GEN-04).
 - N3 se limite à lire la droite et à choisir parmi des points proposés ; placement graphique et
   manière de saisir renvoyés au doc 7.
 

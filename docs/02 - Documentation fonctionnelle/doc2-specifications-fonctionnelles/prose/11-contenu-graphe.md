@@ -40,4 +40,6 @@ tirées par les gabarits.
 La règle « irréductible » s'applique aux notions dont la compétence inclut la
 simplification : N4, dont c'est l'objet, et N8, où le résultat est attendu sous
 forme simplifiée. Les autres notions acceptent toute écriture de la bonne
-valeur ; en particulier, N6 n'a pas N4 (Simplifier) parmi ses prérequis.
+valeur ; en particulier, N6 n'a pas N4 (Simplifier) parmi ses prérequis. Pour
+ces notions, la correction montre le résultat direct du calcul, sans
+simplification (EX-GEN-03).

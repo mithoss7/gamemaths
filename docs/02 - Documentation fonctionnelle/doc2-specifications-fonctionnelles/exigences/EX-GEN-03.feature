@@ -1,7 +1,14 @@
 Fonctionnalité: Forme de la réponse attendue
 
-  Scénario: la réponse attendue d'un exercice à réponse fraction est sous forme irréductible
+  Scénario: sous la règle « valeur », la réponse attendue est le résultat direct du calcul
     Étant donné un gabarit dont le type de réponse est fraction
+    Et dont la règle d'acceptation est « valeur »
+    Quand le système génère un exercice à partir de ce gabarit
+    Alors la réponse attendue de l'exercice est le résultat direct du calcul défini par le gabarit, sans simplification
+
+  Scénario: sous la règle « irréductible », la réponse attendue est sous forme irréductible
+    Étant donné un gabarit dont le type de réponse est fraction
+    Et dont la règle d'acceptation est « irréductible »
     Quand le système génère un exercice à partir de ce gabarit
     Alors la réponse attendue de l'exercice est sous forme irréductible
 

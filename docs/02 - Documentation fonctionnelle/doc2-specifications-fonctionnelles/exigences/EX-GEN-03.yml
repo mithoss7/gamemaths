@@ -4,10 +4,15 @@ statut: en_revue
 section: "11"
 rationale: >
   La réponse attendue est celle que montre la correction après une erreur
-  (EX-PARCOURS-02). Elle est donc donnée sous sa forme la plus simple : forme
-  irréductible pour une fraction, plus petit dénominateur commun pour une mise
-  au même dénominateur. Cela ne restreint pas les réponses acceptées, qui
-  relèvent de la règle d'acceptation du gabarit (section 12).
+  (EX-PARCOURS-02). Sa forme dépend de la compétence évaluée. Sous la règle
+  « valeur », elle est le résultat direct du calcul, sans simplification (par
+  exemple 4/6 pour 5/6 − 1/6) : un apprenant qui n'a pas encore appris à
+  simplifier (N6 n'a pas N4 parmi ses prérequis) ne doit pas être dérouté par
+  la correction. Sous la règle « irréductible », elle est sous forme
+  irréductible. Pour une mise au même dénominateur, elle utilise le plus petit
+  dénominateur commun. Cela ne restreint pas les réponses acceptées, qui
+  relèvent de la règle d'acceptation du gabarit (section 12) : sous la règle
+  « valeur », la forme irréductible reste acceptée.
 trace:
   verifie_par: EX-GEN-03.feature
   satisfait: []
