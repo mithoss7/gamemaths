@@ -5,10 +5,6 @@ d'apprentissage des fractions, organisé en graphe de notions où maîtriser une
 notion débloque les suivantes. Sans compte : la progression reste sur
 l'appareil de l'apprenant.
 
-Le projet sert aussi de support d'apprentissage à la conduite complète d'un
-projet logiciel : besoin, architecture, documentation testable, tests, code,
-versioning.
-
 ## État du projet
 
 **Phase de spécification.** Aucun code applicatif n'est écrit tant que la
