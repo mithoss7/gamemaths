@@ -5,7 +5,7 @@ prérequis.
 
 ## Statut durable (persisté)
 
-- **Non abordée** : aucune tentative d'exercice n'a jamais été faite sur cette notion.
+- **Non abordée** : aucune tentative d'exercice n'a jamais été faite sur cette notion. Une tentative est la soumission d'une réponse bien formée ; une saisie non bien formée n'en est pas une.
 - **Abordée** : au moins une tentative d'exercice a été faite (au cours d'une session présente ou passée), mais la notion n'est pas Maîtrisée.
 - **Maîtrisée** : le critère de maîtrise a été atteint. Statut définitif.
 

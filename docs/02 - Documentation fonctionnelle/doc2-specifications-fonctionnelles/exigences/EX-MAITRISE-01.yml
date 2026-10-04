@@ -5,7 +5,9 @@ section: "7"
 rationale: >
   Chaque exercice n'accepte qu'une seule réponse, définitive. Cette règle donne
   son sens à la série : il n'existe pas de seconde tentative qui viendrait
-  « rattraper » une erreur.
+  « rattraper » une erreur. Seule une réponse bien formée est évaluée : une
+  saisie non bien formée est refusée sans consommer l'essai (EX-REPONSE-01).
+  Les règles d'acceptation sont spécifiées en section 12.
 trace:
   verifie_par: EX-MAITRISE-01.feature
   satisfait: []
